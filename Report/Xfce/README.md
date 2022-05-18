@@ -1,92 +1,169 @@
-#  ORSP004 openEuler RISC-V 开发版本暂定发版测试流程（名称暂定）
+# 在 qemu 上的 openeuler risc-v 中启动并测试 xfce
 
-## Meta info
+## 准备阶段
 
-提议者：周嘉诚、罗云翔、席静、吴伟
+1.  编译支持视频输出的 qemu
 
-时间：2022-05-09
+    ``` console
+    $ git clone https://gitlab.com/wangjunqiang/qemu
+    $ cd qemu
+    $ git switch display
+    ```
 
-## 背景 / Background
+    按照上面指令 git clone qemu 源代码。display 分支增加了视频输出功能，一定要切换到 display 分支后再进行编译。
 
-openEuler RISC-V 一定程度上已经建立自动化构建基础设施，但开发版本的发版流程目前尚未完全确立。测试组及其他下游用户目前无法对新版本发布时间以及存留时间等基础要素作出估计和预期。
+    ``` console
+    $ ./configure --target-list=riscv64-softmmu --prefix=/home/xx/program/riscv64-qemu --enable-kvm  --enable-sdl --enable-gtk --enable-virglrenderer --enable-opengl
+    $ make
+    $ make install
+    ```
 
-## 问题 / Issues
+    按照上面指令编译 qemu，prefix 需要换成一个存在的文件夹。编译过程可参考[下载 QEMU 源代码并构建](https://gitee.com/openeuler/RISC-V/blob/master/doc/tutorials/vm-qemu-oErv.md#i-%E4%B8%8B%E8%BD%BD-qemu-%E6%BA%90%E4%BB%A3%E7%A0%81%E5%B9%B6%E6%9E%84%E5%BB%BA)。中间可能需要各种依赖，按照报错装上即可。
 
-1. openEuler RISC-V 目前已发布开发版本较少，开发/测试组采用多种来源不一、更新时间不同的软件源进行测试，出现的问题难以复现，且随着软件包来源不同而不同。
+2.  编译支持视频输出的 kernel
 
-## 提议 / Proposal
+    直接下载 [Image-mouse-kbd](Image-mouse-kbd) 即可。该 kernel 在 openeuler OLK 5.10 最新 kernel 的基础上加上了 bochs drm 视频驱动以及 xfce 中对键鼠使用的支持。
 
-1. openEuler RISC-V SIG 与 TARSIER 团队根据使用需要共同确立 openEuler RISC-V 开发版本的发版流程。
-2. 参照其他发行版的实行方式，openEuler RISC-V 将根据软件包来源及稳定性差异面向不同用户提供多个差异化版本的构建，在第一个大版本发布之前的过渡周期暂时提供其中实时滚动、预发布大版本两个分支的开发版本构建
-3. 开发版本构建的内容需要包括快照镜像、对应的软件仓库快照和其他所需文件。
-4. 构建基础设施在过渡阶段将每特定周期为 QEMU、Allwinner Nezha/D1、HiFive Unmatched 和 VisionFive V1 四个对象提供构建；暂定每日提供一个实时滚动版本的构建，每周提供一个预发布大版本的构建。
-5. 测试团队可利用上述自动化构建进行测试并在指定时间内提供所需反馈到协商预定位置。反馈维护/存放位置暂定为 Gitee Issue.
-6. 因存储空间有限，已发布的开发版本构建将会在保留一定周期后移除，让位于新的构建。暂定实时滚动构建保留两个月，预发布大版本构建保留四个月或直到新的大版本发布。下游测试所需时间超过保留期限时，基础设施维护者负责延长保留期限。
-7. 相关权责信息在 gitee:openEuler/RISC-V 仓库中进行维护。
+3.  下载 openeuler risc-v 文件系统
 
-## 时间线 / Timeline
+    https://mirror.iscas.ac.cn/openeuler/openEuler-preview/RISC-V/Image/openEuler-preview.riscv64.qcow2
 
-2022-05-10: 构建基础设施正式提供过渡阶段两个分支的构建，对外开放同步到至少一个下游。（周嘉诚）
+4.  用 qemu 启动 openeuler risc-v
 
-2022-06-01: 待定
+    ```
+    qemu-system-riscv64 \
+    -nographic -machine virt -smp 8 -m 2G \
+    -display sdl -vga std \
+    -kernel Image-mouse-kbd \
+    -append "loglevel=3 swiotlb=1 console=ttyS0 rw root=/dev/vda1" \
+    -object rng-random,filename=/dev/urandom,id=rng0 \
+    -device virtio-rng-device,rng=rng0 \
+    -device virtio-blk-device,drive=hd0 \
+    -drive file=openEuler-preview.riscv64.qcow2,format=qcow2,id=hd0 \
+    -device virtio-net-device,netdev=usernet \
+    -netdev user,id=usernet,hostfwd=tcp::10000-:22 \
+    -device qemu-xhci -device usb-tablet -device usb-kbd
+    ```
 
-## 资源 / Resources
+    `qemu-system-riscv64` 一定要是我们自己编译的带视频输出功能的 qemu，如果编译完成后 `qemu-system-riscv64` 所在的文件夹没有加到 `PATH` 环境变量里，上面的命令需要用相对路径指定我们自己编译的 `qemu-system-riscv64`。
 
-- openEuler RISC-V SIG 负责方向及路线规划、与 openEuler 各 SIG 进行沟通协调。
+    `-kernel` 后面跟的是我们自己编译的内核。
 
-- 中国科学院软件研究所 Tarsier 团队投入不少于 600 人月及必要的硬件资源。
+    启动好以后，会出现一个标题为 QEMU 的视频输出窗口，如下所示：
 
-附《openEuler RISC-V操作系统发行版测试流程》
+5.  安装需要的软件包
 
----
+    openeuler risc-v 启动以后，增加以下 repo：
 
-# openEuler RISC-V操作系统发行版测试流程
+    ```
+    [standard]
+    name=standard
+    baseurl=http://119.3.219.20:82/openEuler:/Mainline:/RISC-V/standard_riscv64/
+    enabled=1
+    gpgcheck=0
 
-注：移植和测试流程图参考openEuler Q&A团队报告进行修改和标注。
+    [xfce4]
+    name=xfce4
+    baseurl=http://121.36.3.168:82/home:/pandora:/xfce4/webkit2gtk3/
+    enabled=1
+    gpgcheck=0
 
-## 概述
+    [xfce]
+    name=xfce
+    baseurl=http://121.36.3.168:82/home:/pandora:/xfce/standard_riscv64/
+    enabled=1
+    gpgcheck=0
+    ```
 
-本文档用于规范openEuler RISC-V操作系统发行版的测试和缺陷修复过程。从单包级和版本级两个维度介绍openEuler RISC-V如何进行测试和缺陷修复。
+    然后按照下面的顺序，安装 xfce4 需要的软件包：
 
-![figure_1](./images/figure_1.png)
+    ```
+    libxfce4util
+    xfconf
+    libxfce4ui
+    exo
+    garcon
+    thunar
+    thunar-volman
+    tumbler
+    xfce4-appfinder
+    xfce4-panel
+    xfce4-power-manager
+    xfce4-settings
+    xfdesktop
+    xfwm4
+    xfce4-session
+    ```
 
-<center>图1. 版本构建&测试&发布全流程</center>
+    安装过程中，有些包可能会已经以依赖的形式被安装了，没关系直接跳过。
 
-## 移植
+    另外需要 `dnf upgrade pango`，不然文件管理器不能正常打开。
 
-移植的任务是完成包构建，解决依赖，产出可用的操作系统发行版镜像和软件源，包移植过程如图2。
+    再安装 xorg 的软件包 xorg-x11-xinit 和 xorg-x11-server。
 
-![figure_2](./images/figure_2.png)
+6.  启动 xfce4
 
-<center>图2. 移植流程</center>
+    在输入启动 openeuler risc-v 命令的终端模拟器（下方图片中的白色窗口）输入 `startxfce4` 启动 xfce4，启动过程非常慢，需要耐心等待。启动成功的界面如下所示：
 
-移植用于提交测试的产出包括测试目的（简单文字描述），测试系统镜像（应提供版本号），测试软件源（应停止更新），测试软件（提供版本号），负责缺陷修复人员姓名。
 
-## 测试
+## 测试阶段
 
-测试的任务是测试组基于可用的系统镜像和软件源，完成系统测试和软件集成测试，组织众测完成软件单元测试。测试应获得必要的输入，包括测试目的，测试系统镜像（应提供版本号），测试软件源（应停止更新），测试软件（提供版本号），负责缺陷修复人员姓名。测试组应完成测试方案（测试内容，发放给众测平台），测试用例（收集众测提交测试用例），软件缺陷（收集众测提交缺陷报告，验证后提交到issue或Bugzilla，包括缺陷内容、系统镜像版本号、软件版本号等）。
+xfce4 桌面环境的组成[包括 core modules 和 applications](https://docs.xfce.org/start)，具体如下。在准备阶段我们只安装了 core modules，所以先对 core modules 开展测试。如果在运行 xfce4 应用的过程中出现报错或者无响应的情况，终端模拟器内会给出相应的错误提示。
 
-测试组当前的工作重点是面向操作系统版本发布的集成测试和主要的社区众测，见下图蓝色部分。
+注意，测试的功能多少和最后收到的金额成正比。
 
-![figure_3](./images/figure_3.png)
+- Core Modules
+  - Application Finder (xfce4-appfinder) – Application to quickly run applications and commands
+  - Configuration Storage System (xfconf) – D-Bus-based configuration storage system
+  - Desktop Manager (xfdesktop) – Configure the desktop background image, icons, launchers and folders
+  - Development Tools (xfce4-dev-tools) – A set of scripts and m4/autoconf macros that ease build system maintenance.
+  - Helper Applications (exo) – Manage preferred applications and edit .desktop files
+  - File Manager (thunar) – The fast and easy to use file manager for the Xfce Desktop
+  - Menu Library (garcon) – Library used for menu implementation
+  - Panel (xfce4-panel) – Application launchers, window buttons, applications menu, workspace switcher and more
+  - Power Manager (xfce4-power-manager) – Manage power sources and power consumption of devices
+  - Session Manager (xfce4-session) – Save the state of your desktop and restore it on the next startup
+  - Settings Manager (xfce4-settings) – The Settings daemon which persists many Xfce settings
+  - Thumbnail Service (tumbler) – A D-Bus service for applications to request thumbnails for various URI schemes and MIME types
+  - Utility Sharing Library (libxfce4util) – Library used to share commonly used non-GTK+ utilities among the Xfce applications
+  - Widget Sharing Library (libxfce4ui) – Used to share commonly used Xfce widgets among the Xfce applications
+  - Window Manager (xfwm4) – Handles the placement of windows on the screen
 
-<center>图3. 测试</center>
+### Application Finder (xfce4-appfinder)
 
-系统集成测试包括发行版镜像预装软件的安装和升级，包管理和系统功能。系统集成测试由测试组完成。组件测试包括主要软件的测试包括Xfce桌面环境、Firefox浏览器、LibreOffice办公条件等，内核，容器（docker），虚拟化和新特性（软件）的测试。组件测试使用众测，测试组负责编写测试方案，收集和评审测试报告（用例、缺陷），复现验证缺陷，并将缺陷反馈给开发人员（issue或Bugzilla），如下图红色部分。
+Application to quickly run applications and commands.
 
-![figure_4](./images/figure_4.png)
+打开 application finder，主要测试 application finder 能否正常启动应用以及左下角preferences 里的功能。用文字和图片的形式进行记录。
 
-<center>图4. 内容测试策略</center>
+### Desktop Manager (xfdesktop)
 
-表1是近期将进入测试Xfce和Firefox的测试目标、策略和进入测试的要求。测试组根据测试策略编写测试内容，包括安装步骤和软件基本功能测试要求。
+Configure the desktop background image, icons, launchers and folders.
 
-<center>表1. Xfce和Firefox测试</center>
+在桌面上右键，测试菜单中的功能，观察运行结果是否符合预期。用文字和图片的形式进行记录。
 
-| **测试需求** | **测试策略**                                               | **输入**                                                     |
-| ------------ | ---------------------------------------------------------- | ------------------------------------------------------------ |
-| 支持Xfce桌面 | 验证Xfce桌面系统在openEuler RISC-V版本上的可安装和基本功能 | 输入包括系统镜像，软件源，软件版本号，安装步骤文档。其中测试系统镜像，测试软件源，软件版本号应在测试周期停止变化，软件如有变化应变更版本号。 |
-| 支持Firefox  | 验证Firefox在openEuler  RISC-V版本上的可安装和基本功能     | 同上                                                         |
+### File Manager (thunar)
 
-## 缺陷修复
+The fast and easy to use file manager for the Xfce Desktop.
 
-缺陷修改工作由移植开发人员负责，工作内容是修复测试复现的缺陷，完成后使用issue或Bugzilla将安装步骤和资源反馈给测试人员，等待测试人员验证成功后，更新issue或Bugzilla状态，同时提交PR进行项目合并。
+打开文件管理器，测试常用功能，观察运行结果是否符合预期。用文字和图片的形式进行记录。
+
+### Panel (xfce4-panel)
+
+Application launchers, window buttons, applications menu, workspace switcher and more.
+
+测试桌面 launcher、窗口里的按钮、菜单、workspace 切换是否正常。用文字和图片的形式进行记录。
+
+### Settings Manager (xfce4-settings)
+
+The Settings daemon which persists many Xfce settings.
+
+打开 settings manager，从上到下，从左到右，三个一组，18 个组件一共分为 6 组。
+
+1.  Appearance, Desktop, File Manager Settings
+2.  Panel, Preferred Applications, Window Manager
+3.  Window Manager Tweaks, Workspaces, Color Profiles
+4.  Display, Keyboard, Mouse and Touchpad
+5.  Power Manager, Removable Drives and Media, Accessibility
+6.  MIME Type Editor, Session and Startup, Settings Editor
+
+根据自己选择的组别，对三个组件里的功能进行测试，观察运行结果是否符合预期。用文字和图片的形式进行记录。
