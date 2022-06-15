@@ -4,6 +4,8 @@
 
 Ubuntu 22.04可直接安装`sudo apt install qemu`
 
+Ubuntu 20.04及其以下版本
+
 参考[Xfce安装说明](../../Xfce/Xfce_installation_guide.md)
 
 ## 2. 系统镜像的使用
