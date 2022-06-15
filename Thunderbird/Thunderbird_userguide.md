@@ -102,19 +102,20 @@ Thunderbird 提供安全功能，例如与IMAP和SMTP服务器的TLS/SSL连接�
 
 - 服务器名称：smtp.gmail.com
 - 端口：587
-使用名称和密码：选中
-用户名：您的 gmail 用户 ID，不带“@gmail.com”扩展名（例如，如果您的电子邮件地址是 brian@gmail.com，那么您的用户名是“brian”）。如果您使用的是 Google Apps for Domains，请使用您的完整地址（例如，“billsmith@yourdomain.com”）。
-连接安全：STARTTLS
+- 使用名称和密码：选中
+- 用户名：您的 gmail 用户 ID，不带“@gmail.com”扩展名（例如，如果您的电子邮件地址是 brian@gmail.com，那么您的用户名是“brian”）。如果您使用的是 Google Apps for Domains，请使用您的完整地址（例如，“billsmith@yourdomain.com”）。
+- 连接安全：STARTTLS
+
 保存有关新发送服务器的信息后，从列表中选择您的新电子邮件帐户。在传出服务器 (SMTP)字段中，从下拉列表中选择 SMTP 服务器。当您输入帐户详细信息时，页面上的其他项目会自动创建 - 根据需要进行更改和扩展。
 
 单击新帐户下的服务器设置选项。确保以下字段中的条目与您的电子邮件提供商提供给您的设置相对应：
 
-e2f8e3847ad5f809e97807318a81f5b7-1263336519-453-1.jpg
+![figure_3](./images/figure_3.jpg)
 
-保存这些更改后，您应该能够发送和接收电子邮件。帐户配置的其他方面是可选的且不言自明。
+保存这些更改后，您应该能够发送和接收电子邮件了。
 
+#### 3.2 雷鸟和 Gmail
 
-![Firefox Quantum 浏览器布局](./images/figure_2.png)Firefox Quantum 浏览器布局
 
 ## 4. 联系人
 
