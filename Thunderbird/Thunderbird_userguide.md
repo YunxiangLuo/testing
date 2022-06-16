@@ -1554,4 +1554,30 @@ Thunderbird 密码管理器安全地存储您用于访问服务器的用户名�
 
 - 使用主密码：如果您共享一台计算机，并且不希望其他人看到您存储的密码，启用此设置以使 Thunderbird 要求您输入主密码，以便查看或使用您告诉 Thunderbird 的密码记住。要编辑或删除您的主密码，请单击更改主密码
 
+### 7.4 隐私面板 - Thunderbird 中的远程内容和 cookie 设置
+
+![figure_106](./images/figure_106.png)
+
+#### 邮件内容
+
+- 允许消息中的远程内容：有时消息会远程加载内容，例如图像。不幸的是，垃圾邮件发送者通常使用这种方法来验证您的地址是否有效。默认情况下，Thunderbird 不加载远程内容，并为每条消息提供一个按钮来覆盖它。如果您希望 Thunderbird 自动在每条消息上显示远程内容，请选择此设置。点击例外控制哪些站点可以自动加载远程内容。有关详细信息，请参阅消息中的远程内容。
+
+#### 网页内容
+
+- 记住我访问过的网站和链接：如果选中，Thunderbird 将更改您已经访问过的链接的颜色。
+- 接受来自网站的 cookie：如果选择，Thunderbird 将接受来自您查看的消息中的网络内容的 cookie。点击例外控制某些网站是否不允许设置cookies。
+
+接受第三方 cookie：
+    - 始终：当您查看包含来自 http://site1.com 内容的消息时，Thunderbird将始终接受来自http://site2.com的 cookie 。
+    - From Visited：如果您之前查看过来自 http://site2.com 的消息，当您查看来自http://site1.com的消息时，Thunderbird 将接受来自该站点的 cookie ，否则 Thunderbird 将不接受他们。
+    - 从不：当您查看包含 http://site1.com 内容的消息时，Thunderbird绝不会接受来自http://site2.com的 cookie 。
+
+保持到：
+
+    - 它们过期：如果选中，Thunderbird 将允许您查看包含内容的消息的站点指定 Thunderbird 应保留其 cookie 的时间。
+    - 我关闭 Thunderbird：如果选择，当您关闭 Thunderbird 时，您的 cookie 将被删除。
+    - 每次都问我：如果选中，Thunderbird 会在每次站点尝试设置 cookie 时询问您保留 cookie 的时间。点击显示 Cookie显示 Cookie 窗口
+
+- 告诉网站我不想被跟踪：大多数主要网站都会跟踪访问者的行为，然后将这些信息出售或提供给其他公司。此信息可用于展示专门针对您的广告、产品或服务。如果选中，Thunderbird 将告诉每个网站查看一条消息，其中包含来自其广告商和内容提供商的内容，您不希望跟踪您的浏览行为。
+
 ## 8. 日历
