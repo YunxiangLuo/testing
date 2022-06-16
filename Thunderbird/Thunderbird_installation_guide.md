@@ -1,8 +1,10 @@
-# Firefox安装说明
+# Thunderbird安装说明
 
 ## 1. 编译支持视频输出的QEMU
 
-参考[Xfce安装说明](../Xfce/Xfce_installation_guide.md)
+Ubuntu 22.04可直接安装`sudo apt install qemu`
+
+参考[Xfce安装说明](../../Xfce/Xfce_installation_guide.md)
 
 ## 2. 系统镜像的使用
 
@@ -30,28 +32,26 @@ tar -I `zstdmt` -xvf ./openeuler-qemu.raw.tar.zst
 
 - 输入密码完成登录，默认的用户名和密码为 `root` 和 `openEuler1234`
 
-## 3. 安装Firefox
+## 3. 安装Thunderbird
 
-### 3.1 安装Firefox
+### 3.1 安装Thunderbird
 
 - 执行下列指令
 
 ```bash
-yum install alsa-lib-devel dbus-glib desktop-file-utils pciutils mesa* firefox -y
+yum install alsa-lib-devel dbus-glib desktop-file-utils pciutils mesa* thunderbird -y
 ```
 
 - 安装过程中，有些包可能会已经以依赖的形式被安装了，没关系直接跳过。
 
-### 3.2 启动Firefox
+### 3.2 启动Thunderbird
 
-- Xfce桌面下打开终端，输入`firefox` 启动 Firefox。
+- Xfce桌面下打开终端，输入`thunderbird` 启动 Thunderbird。
 
 ```shell
-firefox
+thunderbird
 ```
 
-- 点击Firefox图标启动Firefox
+- 点击Thunderbird图标启动Thunderbird
 
 root 默认密码为 openEuler12#$
-
-![figure_1](./images/figure_1.png)
