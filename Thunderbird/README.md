@@ -24,14 +24,14 @@
 
 | 测试内容 | 测试要求                             |
 | -------- | ------------------------------------ |
-| 安装测试 | 在openEuler RISC-V QEMU上安装Firefox |
-| 功能测试 | 覆盖测试点，Firefox基本功能运行正常  |
+| 安装测试 | 在openEuler RISC-V QEMU上安装Thunderbird |
+| 功能测试 | 覆盖测试点，Thunderbird基本功能运行正常  |
 | 专项测试 | 无                                   |
 
 ## 3.2   约束说明
 
-- [安装说明](./Firefox_installation_guide.md)
-- [使用说明](./Firefox_userguide.md)
+- [安装说明](./)
+- [使用说明](./Thunderbird_userguide.md)
 
 ## 3.3 测试要求
 
