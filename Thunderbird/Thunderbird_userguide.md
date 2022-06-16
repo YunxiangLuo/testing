@@ -624,6 +624,24 @@ Thunderbird 包含一个名为“Gloda”的消息索引和搜索系统，它是
 
 ![figure_41](./images/figure_41.jpg)
 
+搜索短语“新的 Thunderbird 页面”。结果应包括包含整个短语的消息：
+
+![figure_42](./images/figure_42.jpg)
+
+您可以组合这两种类型的搜索。例如，搜索“New Thunderbird”和“pages”会返回包含短语“new Thunderbird”和单词“pages”的消息：
+
+![figure_43](./images/figure_43.jpg)
+
+- 搜索结果
+
+搜索结果显示在新选项卡中。左侧有一个面板，用于对结果进行分类，例如显示在与特定人员的对话中或存储在特定邮件文件夹中的消息中包含术语的消息数量等。
+
+![figure_44](./images/figure_44.jpg)
+
+
+
+
+
 
 ## 4. 联系人
 
