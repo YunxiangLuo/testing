@@ -1,8 +1,8 @@
-# openEuler 22.03_LTS RISC-V版本Firefox特性测试
+# openEuler 22.03_LTS RISC-V版本Thunderbird特性测试
 
 # 1. 测试目的
 
-使用openEuler 22.03_LTS RISC-V版本镜像，测试Firefox的安装和基本功能运行是否正常。
+使用openEuler 22.03_LTS RISC-V版本镜像，测试Thunderbird的安装和基本功能运行是否正常。
 
 # 2. 测试信息
 
@@ -10,7 +10,7 @@
 
 | 版本名称     | 更新时间   | 测试起始时间 | 测试结束时间 |
 | ------------ | ---------- | ------------ | ------------ |
-| Firefox vxxx | 2022-0x-xx |              |              |
+| Thunderbird vxxx | 2022-0x-xx |              |              |
 
 ## 2.2 硬件环境信息
 
