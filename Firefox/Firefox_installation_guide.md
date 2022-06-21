@@ -2,27 +2,26 @@
 
 ## 1. 编译支持视频输出的QEMU
 
+### 1.1 Ubuntu 20.04及其以下版本
 参考[Xfce安装说明](../Xfce/Xfce_installation_guide.md)
+
+#### 1.2Ubuntu 22.04直接使用apt安装qemu
 
 ## 2. 系统镜像的使用
 
 ### 2.1 镜像下载
 
-#### 下载内容
+#### 2.1.1 下载内容
 
 - 下载 QEMU 目录下的 `openeuler-qemu-xfce.raw.tar.zst`、`fw_payload_oe_qemuvirt.elf` 和 `start_vm_xfce.sh`
 - 下载地址 [https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220621/v0.1/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220621/v0.1/QEMU/)
 或
 https://repo.tarsier-infra.com/openEuler-RISC-V/testing/20220621/v0.1/QEMU/
 
-#### 启动
+#### 2.1.2 启动
 
 - 运行 `bash start_vm_xfce.sh`
-- 通过 VNC 打开图形界面（以 TigerVNC 为例） `vncviewer :5900`
-
-####  安装 Firefox
-
-- 使用包管理器直接安装 `dnf install firefox`
+- 通过 VNC 打开图形界面（以 TigerVNC 为例，本地地址localhost） `vncviewer :5900`
 
 ### 2.2 环境安装详细步骤
 
@@ -37,6 +36,8 @@ tar -I `zstdmt` -xvf ./openeuler-qemu-xfce.raw.tar.zst
 - 执行 `bash start_vm_xfce.sh`，并查看 `ssh port` 的返回结果
 
 - 执行 `ssh -p {insert your ssh port here} root@localhost`，如 `ssh -p 10255 root@localhost`
+
+- 本地安装vnc客户端，访问IP地址localhost，端口5900
 
 - 输入密码完成登录，默认的用户名和密码为 `root` 和 `openEuler1234`
 
