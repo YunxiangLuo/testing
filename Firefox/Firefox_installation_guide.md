@@ -5,7 +5,7 @@
 ### 1.1 Ubuntu 20.04及其以下版本
 参考[Xfce安装说明](../Xfce/Xfce_installation_guide.md)
 
-#### 1.2Ubuntu 22.04直接使用apt安装qemu
+### 1.2Ubuntu 22.04直接使用apt安装qemu
 
 ## 2. 系统镜像的使用
 
