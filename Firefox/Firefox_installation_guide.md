@@ -110,7 +110,7 @@ Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
 
 ```bash
 sudo apt install zstd -y
-tar -I `zstdmt` -xvf ./openeuler-qemu-xfce.raw.tar.zst
+tar -I zstdmt -xvf ./openeuler-qemu-xfce.raw.tar.zst
 ```
 
 - 执行 `bash start_vm_xfce.sh`
