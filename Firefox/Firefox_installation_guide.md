@@ -109,6 +109,7 @@ Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
 - 解压 tar.zst 格式的镜像文件
 
 ```bash
+sudo apt install zstd -y
 tar -I `zstdmt` -xvf ./openeuler-qemu-xfce.raw.tar.zst
 ```
 
