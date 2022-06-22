@@ -129,7 +129,9 @@ Firefox 中的书签页面
 3.单击它并选择“书签”选项。
 4.将出现一个下拉菜单，显示您所有的书签页面。
 
-![在 Firefox 中查看书签页面](./images/figure_10.png)在 Firefox 中查看书签页面
+![在 Firefox 中查看书签页面](./images/figure_10.png)
+
+在 Firefox 中查看书签页面
 
 ## 11. 从其他浏览器导入数据
 
@@ -165,7 +167,9 @@ Firefox 导入向导
 2.选择“新建私人窗口”选项。
 3.或者，您可以在 Windows 中按“Ctrl + Shift + P”，在 macOS 中按“Command + Shift + P”打开私密模式。
 
-![Firefox 中的隐私浏览](./images/figure_14.png)Firefox 中的隐私浏览
+![Firefox 中的隐私浏览](./images/figure_14.png)
+
+Firefox 中的隐私浏览
 
 使用私人窗口时，Firefox 不会在历史记录中记录您的浏览活动。关闭私人窗口以返回正常的 Firefox 窗口。
 
@@ -196,9 +200,8 @@ Firefox 提供两种类型的附加组件目录来增强浏览器的功能。您
 
 您可以在“工具 > 登录以同步...”菜单下注册 Firefox 帐户。浏览时创建一个新帐户并登录 Firefox。
 
-![创建火狐账号](./images/figure_17.png)创建火狐账号
+![创建火狐账号](./images/figure_17.png)
+
+创建火狐账号
 
 这将帮助您在使用同一 Firefox 帐户登录的所有设备上同步您的浏览活动。
-
-
-
