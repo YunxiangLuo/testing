@@ -142,5 +142,5 @@ Thunderbird的基本功能共7项，为了避免同学们测试重复的内容�
 
 # 5. 缺陷修复责任人
 
-- firefox port maintainer: @Jingwiw
+- Thunderbird port maintainer: 
 - CI maintainer: @jchzhou
