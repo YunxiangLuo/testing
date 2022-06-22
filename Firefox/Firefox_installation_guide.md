@@ -35,10 +35,9 @@ cd build
 - 下载支持视频输出QEMU源码包方法2（2选1）
 
 ```bash
-git clone https://gitlab.com/qemu-project/qemu.git
-cd qemu
-git submodule init
-git submodule update --recursive
+wget https://download.qemu.org/qemu-7.0.0.tar.xz
+tar xvJf qemu-7.0.0.tar.xz
+cd qemu-7.0.0
 mkdir build
 cd build
 ```
