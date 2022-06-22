@@ -18,8 +18,6 @@ pip3 install meson
 
 -  下载支持视频输出QEMU 源码包
 
-命令格式如下（需要申请gitee账号）
-
 ```bash
 git clone -b display https://gitlab.com/wangjunqiang/qemu.git
 ```
