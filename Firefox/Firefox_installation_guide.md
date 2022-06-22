@@ -98,10 +98,17 @@ qemu-system-riscv64 --version
 
 如出现类似如下输出表示 QEMU 工作正常
 
-````bash
+```bash
 QEMU emulator version 6.2.90 (v7.0.0-rc0-40-g2058fdbe81)
 Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
-````
+```
+
+或
+
+```bash
+QEMU emulator version 7.0.0
+Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
+```
 
 ### 1.2 Ubuntu 22.04直接使用apt安装qemu
 
