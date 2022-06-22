@@ -108,12 +108,16 @@ Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
 
 - 解压 tar.zst 格式的镜像文件
 
+注：解压需要10.7G硬盘空间
+
 ```bash
 sudo apt install zstd -y
 tar -I zstdmt -xvf ./openeuler-qemu-xfce.raw.tar.zst
 ```
 
 - 执行 `bash start_vm_xfce.sh`
+
+注：QEMU下启动Xfce较慢，请耐心等待
 
 - 输入密码完成登录，默认的用户名和密码为 `root` 和 `openEuler1234`
 
