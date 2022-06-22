@@ -119,7 +119,7 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.raw.tar.zst
 
 注：QEMU下启动Xfce较慢，请耐心等待
 
-- 输入密码完成登录，默认的用户名和密码为 `root` 和 `openEuler1234`
+- 输入密码完成登录，默认的用户名和密码为 `root` 和 `openEuler12#$`
 
 ## 3. 安装Firefox
 
