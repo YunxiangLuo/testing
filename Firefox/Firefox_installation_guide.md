@@ -16,7 +16,7 @@ sudo apt install -f
 pip3 install meson
 ```
 
--  下载支持视频输出QEMU 源码包
+-  下载支持视频输出QEMU源码包方法1（2选1）
 
 注：如下载连接超时请重试几遍
 
@@ -25,6 +25,17 @@ git clone -b display https://gitlab.com/wangjunqiang/qemu.git
 ```
 
 ```bash
+cd qemu
+git submodule init
+git submodule update --recursive
+mkdir build
+cd build
+```
+
+- 下载支持视频输出QEMU源码包方法2（2选1）
+
+‵‵`bash
+git clone https://gitlab.com/qemu-project/qemu.git
 cd qemu
 git submodule init
 git submodule update --recursive
