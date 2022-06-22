@@ -47,10 +47,7 @@
 
 ### 3.4.1 任务分组
 
-Firefox的[基本功能](https://support.mozilla.org/zh-CN/products/firef## 权责信息
-
-- firefox port maintainer: [@Jingwiw](https://gitee.com/Jingwiw)
-- CI maintainer: [@jchzhou](https://gitee.com/jchzhou)ox/basic-browsing-firefox)，具体如下。此项目对Firefox的安装和基本功能开展测试。如果在运行 Firefox的应用的过程中出现报错或者无响应的情况，终端模拟器内会给出相应的错误提示。
+Firefox的[基本功能](https://support.mozilla.org/zh-CN/products/firefox/basic-browsing-firefox)，具体如下。此项目对Firefox的安装和基本功能开展测试。如果在运行 Firefox的应用的过程中出现报错或者无响应的情况，终端模拟器内会给出相应的错误提示。
 
 Firefox的基本功能共8项，为了避免同学们测试重复的内容，测试内容分为三组，被分配到一组的同学只需要测试组内的任务即可，如有尚有余力欢迎同学们领取别组任务，具体分配如下表格:
 
