@@ -95,6 +95,10 @@ Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
 
 ### 1.2 Ubuntu 22.04直接使用apt安装qemu
 
+```bash
+sudo apt install qemu-system-riscv64 -y
+```
+
 ## 2. 系统镜像的使用
 
 ### 2.1 镜像下载
