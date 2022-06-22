@@ -103,8 +103,6 @@ Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
 
 - 下载 QEMU 目录下的 `openeuler-qemu-xfce.raw.tar.zst`、`fw_payload_oe_qemuvirt.elf` 和 `start_vm_xfce.sh`
 - 下载地址 [https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220621/v0.1/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220621/v0.1/QEMU/)
-或
-https://repo.tarsier-infra.com/openEuler-RISC-V/testing/20220621/v0.1/QEMU/
 
 #### 2.1.2 启动
 
