@@ -192,7 +192,7 @@ Firefox的基本功能共8项，为了避免同学们测试重复的内容，测
 
    *以上内容为必填项，完整[测试缺陷报告](./缺陷报告模板.xlsx)*
 
-# 5. 缺陷修复人员
+# 5. 缺陷修复责任人
 
 - firefox port maintainer: [@Jingwiw](https://gitee.com/Jingwiw)
 - CI maintainer: [@jchzhou](https://gitee.com/jchzhou)
