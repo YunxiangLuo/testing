@@ -145,6 +145,7 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.raw.tar.zst
 dnf install thunderbird -y
 ```
 
+- root 默认密码为 openEuler12#$
 - 安装过程中，有些包可能会已经以依赖的形式被安装了，没关系直接跳过。
 
 ### 3.2 启动Thunderbird
@@ -156,5 +157,3 @@ thunderbird
 ```
 
 - 点击Thunderbird图标启动Thunderbird
-
-root 默认密码为 openEuler12#$
