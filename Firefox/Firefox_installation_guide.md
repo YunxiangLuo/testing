@@ -164,6 +164,6 @@ dnf install firefox
 firefox
 ```
 
-- 点击Firefox图标启动Firefox
+- 点击Firefox图标启动Firefox，见Application->Web Browser，或Application->Internet->Firefox
 
 ![figure_1](./images/figure_1.png)
