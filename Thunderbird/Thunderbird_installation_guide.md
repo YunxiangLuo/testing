@@ -142,7 +142,7 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.raw.tar.zst
 - 执行下列指令
 
 ```bash
-dnf install thunderbird -y
+dnf install thunderbird
 ```
 
 - root 默认密码为 openEuler12#$
@@ -156,4 +156,4 @@ dnf install thunderbird -y
 thunderbird
 ```
 
-- 点击Thunderbird图标启动Thunderbird
+- 点击Thunderbird图标启动Thunderbird，见Application->Mail Reader，或Application->Other->Thunderbird
