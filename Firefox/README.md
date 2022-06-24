@@ -52,8 +52,11 @@ Firefox的[基本功能](https://support.mozilla.org/zh-CN/products/firefox/basi
 Firefox的基本功能共8项，为了避免同学们测试重复的内容，测试内容分为三组，被分配到一组的同学只需要测试组内的任务即可，如有尚有余力欢迎同学们领取别组任务，具体分配如下表格:
 
 子任务1：OpenEuler RISC-V Firefox之网页浏览、搜索和书签功能测试
+
 子任务2：OpenEuler RISC-V Firefox之历史记录、设置和通知功能测试
+
 子任务3：OpenEuler RISC-V Firefox之查看、下载和同步功能测试
+
 报酬50-200元（根据测试用例和缺陷条目的多少，缺陷条目为重点考评标准）
 
    | 小组编号 | 组内任务                 |
