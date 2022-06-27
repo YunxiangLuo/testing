@@ -1,8 +1,8 @@
-# Firefox for openeuler on visionfive安装说明
+# Firefox for openeuler on Visionfive安装说明
 
 ## 1 目标
 
-在visionfive开发板上的openeuler操作系统中安装并验证Firefox浏览器。
+在Visionfive开发板上的openeuler操作系统中安装并验证Firefox浏览器。
 
 ## 2 系统安装
 
