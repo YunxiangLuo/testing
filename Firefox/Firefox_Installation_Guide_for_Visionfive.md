@@ -1,5 +1,7 @@
 # Firefox for openeuler on Visionfive安装说明
 
+注：感谢袁老师！本文档来源于https://gitee.com/samuel_yuan/riscv-openeuler-visionfive/blob/master/chapter2-Verify-openeuler-GUI-APP-on-visionfive/Verify-firefox-for-openeuler-on-visionfive.md
+
 在Visionfive开发板上的openeuler操作系统中安装Firefox浏览器。
 
 ## 1. 系统安装
