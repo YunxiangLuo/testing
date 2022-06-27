@@ -1,12 +1,10 @@
 # Firefox for openeuler on Visionfive安装说明
 
-## 1 目标
+在Visionfive开发板上的openeuler操作系统中安装Firefox浏览器。
 
-在Visionfive开发板上的openeuler操作系统中安装并验证Firefox浏览器。
+## 1. 系统安装
 
-## 2 系统安装
-
-### 2.1 系统镜像准备
+### 1.1 系统镜像准备
 
 随着openeuler的更新，社区提供了unmatched、D1、visionfive等三种系统镜像，其中visionfive的系统镜像下载连接地址如下：
 https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220622/v0.2/Visionfive/
@@ -16,7 +14,7 @@ https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220622
 
 其他文件均无需下载。
 
-### 2.2 安装系统镜像
+### 1.2 安装系统镜像
 
 1）将下载文件解压缩为镜像文件：openeuler-visionfive-xfce.img
 
@@ -70,9 +68,9 @@ sudo cp -r /home/riscv/riscv64-linux/rootfs/boot/Image.gz /media/riscv/715D-A517
 sudo umount /home/riscv/riscv64-linux/rootfs
 ```
 
-## 3 安装Firefox浏览器
+## 2. 安装Firefox浏览器
 
-### 3.1 准备工作
+### 2.1 准备工作
 
 1）将准备好的micro sd卡插入visionfive开发板，并启动。考虑到我们运行的文件系统已包含xfce，如果开发板连接了显示器，那么可以看到启动系统会自动进入到xfce的用户登陆界面。
 
@@ -86,7 +84,7 @@ root 默认密码为 openEuler12#$
 date -s "2022-06-25 21:15:50"
 ```
 
-### 3.2 安装Firefox浏览器
+### 2.2 安装Firefox浏览器
 
 ```bash
 dnf install firefox
