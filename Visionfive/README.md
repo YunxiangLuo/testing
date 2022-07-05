@@ -68,7 +68,8 @@ sudo dd of=/dev/sdb bs=1M iflag=fullblock oflag=direct conv=fsync status=progres
 
 3）使用Xmodem安装固件。
 
-    安装teraterm，https://mobaxterm.mobatek.net/download.html
+安装teraterm，https://mobaxterm.mobatek.net/download.html
+
     选择菜单setup->Serial port setup
     Speed设置为115200
     Data设置为8bit
@@ -76,6 +77,7 @@ sudo dd of=/dev/sdb bs=1M iflag=fullblock oflag=direct conv=fsync status=progres
     Stoo bits设置为1bit
     Flowcontrol设置为none
 
+![figure_4](./images/figure_4.png)
 
 ### 1.5 启动Visionfive
 
