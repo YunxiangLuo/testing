@@ -21,6 +21,10 @@
 如下图：
 ![figure_1](./images/figure_1.jpg)
 
+照片：
+
+![figure_3](./images/figure_3.jpg)
+
 ### 1.2 准备系统镜像
 
 Visionfive的系统镜像下载连接地址如下： https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220622/v0.2/Visionfive/
