@@ -23,6 +23,7 @@
 - TXD连接10 GPIO13(UART RX)
 
 如下图：
+
 ![figure_1](./images/figure_1.jpg)
 
 照片：
