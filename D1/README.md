@@ -2,7 +2,7 @@
 
 ## 1 准备工作
 
-### 1.1 准备硬件
+### 1.1 硬件准备
 
 1）visionfive开发板：由starfive获取得到开发板。
 
@@ -19,9 +19,9 @@
 - TXD连接10 GPIO13(UART RX)
 
 如下图：
-![figure_1](./images/figure_1.jpg)
+![Image](./images/figure_1.jpg)
 
-### 1.2 准备系统镜像
+### 1.2 系统镜像准备
 
 Visionfive的系统镜像下载连接地址如下： https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220622/v0.2/Visionfive/
 
@@ -33,7 +33,7 @@ Visionfive的系统镜像下载连接地址如下： https://mirror.iscas.ac.cn/
 wget https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220622/v0.2/Visionfive/openeuler-visionfive-xfce.img.tar.zst
 ```
 
-### 1.3 刷写镜像
+### 1.3 镜像刷写
 
 1. 解压镜像文件
 
@@ -50,26 +50,7 @@ tar -I zstdmt -xvf ./openeuler-visionfive-xfce.img.tar.zst
 sudo dd of=/dev/sdb bs=1M iflag=fullblock oflag=direct conv=fsync status=progress
 ```
 
-### 1.4 安装串口调试软件
-
-1）将Usb转uart串口通信模块连接到电脑usb口。
-
-2）检查设备管理器中的COM端口，例如COM4。
-
-![figure_2](./images/figure_2.png)
-
-3）使用Xmodem安装固件。
-
-    安装teraterm，https://mobaxterm.mobatek.net/download.html
-    选择菜单setup->Serial port setup
-    Speed设置为115200
-    Data设置为8bit
-    Paritv设置为none
-    Stoo bits设置为1bit
-    Flowcontrol设置为none
-
-
-### 1.5 启动Visionfive
+### 1.4 启动Visionfive
 
 将64G micro-sd卡装入Visionfive sd卡槽，连接tpye-c电源启动，启动报错如下
 
@@ -186,7 +167,7 @@ VisionFive #
 ```
 
 
-## 1.6 参考资料
+## 1.5 参考资料
 
 <https://rvspace.org/en/Product/VisionFive/Technical_Documents/VisionFive_Software_Technical_Reference_Manual>
 
