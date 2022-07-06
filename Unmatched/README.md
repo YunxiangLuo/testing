@@ -36,7 +36,7 @@ wget https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/202
 
 ### 1.3 刷写镜像
 
-以下步骤适用于Ubuntu20.04，如适用Windows操作系统，解压请下载[zstd](./zstd-v1.4.4-win32.zip)`zstd.exe -d ./openeuler-d1-xfce.img.tar.zst`,刷写请下载[win32diskimager](./win32diskimager-1.0.0-install.exe)
+以下步骤适用于Ubuntu20.04，如适用Windows操作系统，解压请下载[zstd](./zstd-v1.4.4-win32.zip)`zstd.exe -d ./openeuler-d1-xfce.img.tar.zst`，刷写请下载[win32diskimager](./win32diskimager-1.0.0-install.exe)
 
 1. 解压镜像文件
 
