@@ -1,5 +1,7 @@
 # openEuler自动化测试框架mugen 
 
+李昊翔 罗云翔
+
 ## 1. mugen简介  
 
 mugen是openEuler社区开放的测试框架，提供公共配置和方法以便社区开发者进行测试代码的编写和执行。它提供了丰富的openEuler测试代码（用于openEuler x86/AArch64 系统和软件功能的测试）；一套编写测试代码的规范（详见第四部分mugen测试开发）；辅助编写测试的函数库（详见mugen项目的文件结构和第四部分mugen测试开发）；一个能简化测试执行过程的执行程序（mugen.sh）。 
