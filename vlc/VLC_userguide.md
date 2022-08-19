@@ -131,6 +131,39 @@ VLC 媒体播放器有用于 Windows 和 GNU/Linux 的Qt跨平台接口，VLC �
 
 ![figure_12](./images/figure_12.png)
 
+然后选择打开文件菜单项。
+
+![figure_13](./images/figure_13.png)
+
+将出现一个打开文件对话框。选择要打开的文件，然后选择Open。
+
+![figure_14](./images/figure_14.png)
+
+单击打开后，VLC 将开始播放指定的文件。
+
+上述步骤的替代方法是简单地将文件拖放到 VLC 主界面。
+
+![figure_15](./images/figure_15.png)
+
+#### 2.1.2 播放 CD/DVD/VCD/蓝光
+
+要播放 CD、VCD 或 DVD，请打开Media ‣ Open Disc菜单项。
+
+![figure_16](./images/figure_16.png)
+
+在如下图所示的“打开磁盘”对话框中，选择您喜欢的媒体类型（DVD、蓝光、音频 CD 或 SVCD/VCD）。
+
+![figure_17](./images/figure_17.png)
+
+您可以通过从“光盘设备”下拉列表中选择驱动器号来选择媒体所在的驱动器，也可以单击“浏览”按钮，这将打开一个对话框，您可以使用该对话框来浏览您的媒体想玩 VLC。读取 DVD 时，还有一个无 DVD 菜单选项。
+
+如果您想从给定的标题和章节而不是从头开始播放 DVD 或 VCD，您可以使用标题和章节选择器进行设置。您还可以使用选择器设置音频和字幕轨道。
+
+![figure_18](./images/figure_18.png)
+
+
+
+
 
 
 
