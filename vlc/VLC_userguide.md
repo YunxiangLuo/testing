@@ -111,7 +111,9 @@ VLC 媒体播放器有用于 Windows 和 GNU/Linux 的Qt跨平台接口，VLC �
 
 ### 1.2 播放控制
 
+在这里，您可以使用许多功能来控制媒体文件的播放。
 
+![figure_10](./images/figure_10.png)
 
 
 
