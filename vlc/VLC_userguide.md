@@ -504,4 +504,19 @@ VLC 热键是即使 VLC 没有焦点也可以使用的键盘快捷键。在这�
 - 再次单击“录制” 记录按钮以停止录制，
 - 您也可以通过单击停止按钮来停止录制。
 
+![figure_43](./images/figure_43.png)
 
+录音存储在计算机上用于视频或音乐的默认存储文件夹中，名称如下vlc-record-Date-Time-Channel-Track.extension。
+
+示例：vlc-record-2011-09-22-10h19m48s-Radio CAFF-Silencio - Arrabal Salvaje.mp3
+
+您可以通过Streamripper中继流，即通过将StreamRipper定向到ShoutCast流并将 VLC 定向到 StreamRipper 的中继端口（默认http://localhost:8000）来自动将流切割成轨道。
+使录制按钮可见
+
+默认情况下，录制按钮不容易访问，但您可以使其永久可见。为此，请使用以下方法之一：
+
+- 高级控制
+
+单击View ‣ Advanced Controls以在Playback Controls正上方显示高级工具栏。此高级工具栏包含“录制”按钮。录制按钮可见后，单击它开始录制。
+
+![figure_44](./images/figure_44.png)
