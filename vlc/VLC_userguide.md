@@ -302,3 +302,22 @@ VLC 媒体播放器可以播放多种音频式：.asf、.avi、.divx、.dv、.mx
 4. 如果您想在立体声模式下收听音轨，请选择Audio ‣ Audio Device ‣ Stereo 。
 
 ![figure_28](./images/figure_28.png)
+
+#### 3.4 可视化音频
+
+可视化显示颜色和几何形状的飞溅，并根据一段音乐生成动画图像。从“音频”菜单中选择可视化类型选项以查看效果。可用的不同视觉效果有：
+
+- 光谱仪
+- 范围
+- 光谱
+- 音量表
+- 咕咕咕
+- 项目M
+- 3D 光谱
+
+![figure_29](./images/figure_29.png)
+要禁用可视化，请单击Visualizations ‣ Disable下拉菜单。
+
+#### 3.5 最大音量
+
+要更改音频文件的最大音量，请转到Tools ‣ Preferences，选择左下角的All ，然后选择Interface ‣ Main interface ‣ Qt ‣ Maximum volume shown。然后保存并重新启动 VLC。
