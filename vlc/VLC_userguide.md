@@ -399,3 +399,53 @@ VLC 媒体播放器可以播放多种音频式：.asf、.avi、.divx、.dv、.mx
 2. 要更改去隔行模式，请选择Video ‣ Deinterlace mode
 
 3. 选择一种模式并观察正在播放的视频的变化。
+
+### 5. 字幕
+
+字幕是电影对话的文本版本。如果您正在观看包含外语的电影，字幕会很有帮助。在 VLC 中，支持 .cdg、.idx、.srt、.sub、.utf、.ass、.ssa、.aqt、.jss、.psb、.rt 和 smi 格式的字幕。
+
+#### 5.1 包含字幕的媒体
+
+许多类型的媒体都可以嵌入字幕。VLC 可以读取以下媒体格式的字幕：
+
+- DVD
+- SVCD
+- OGM 文件
+- Matroska (MKV) 文件
+
+VLC 媒体播放器默认启用字幕。要禁用它们，请单击字幕菜单以查找文件的可用字幕轨道，然后选择禁用以关闭字幕。根据媒体的不同，轨道可能会提供描述（例如语言）。
+
+要默认禁用字幕，请转到Tools ‣ Preferences ‣ Subtitles/OSD，然后取消选中Enable subtitles复选框并单击Save。
+
+![figure_39](./images/figure_39.png)
+
+DVD和SVCD字幕只是图像，因此您无法为它们更改任何内容。OGM和Matroska字幕是渲染文本，因此您可以更改多个选项。
+
+#### 5.2 字体修改
+
+可以在Tools ‣ Preferences选项卡中更改文本渲染选项。要更改字体类型和大小，请单击Videos ‣ Subtitles/OSD，然后从Font and Font size下拉菜单中选择您的偏好。
+
+![figure_40](./images/figure_40.jpg)
+
+您需要重新启动流以使字体修改生效。
+
+#### 5.3 字幕文件
+
+虽然像Matroska或OGM这样的现代文件格式可以直接处理字幕，但像 AVI 这样的旧格式却不能。因此，已经创建了许多字幕文件格式。您需要两个文件：视频文件和仅包含字幕文本和时间戳的字幕文件。
+
+VLC 可以处理这些类型的字幕文件：
+
+- MicroDVD
+- SubRIP
+- SubViewer
+- SSA
+- sami
+- Vobsub（这个很特别：它不是由文本而是由图像制成的，这意味着您不能更改字体）
+
+要打开和使用字幕文件，请在单击打开多个文件时出现的对话框中单击下图所示的使用字幕文件复选框……然后单击浏览按钮选择文件。还有一个选项可以设置字符编码、对齐方式和大小。
+
+![figure_41](./images/figure_41.png)
+
+另一种方法是从Video ‣ Subtitle Track菜单加载字幕。
+
+对于 Vobsub 字幕，您需要选择.idx文件，而不是.sub文件。编码、对齐和大小不会对 Vobsub 字幕产生任何影响。
