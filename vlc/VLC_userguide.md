@@ -558,3 +558,15 @@ VLC 可以使用录制按钮录制它可以播放的任何音频内容，如录�
 - 然后在捕获模式下单击下拉菜单并选择DirectShow。
 
 ![figure_49](./images/figure_49.png)
+
+如果要更改录音设备，请单击音频设备名称下的下拉菜单，然后选择所需的设备。
+
+![figure_50](./images/figure_50.png)
+
+2. 单击播放按钮上的箭头，然后选择转换或按。Alt+O
+
+![figure_51](./images/figure_51.png)
+
+3. 在配置文件下单击下拉菜单以选择所需的音频输出格式。
+
+![figure_52](./images/figure_52.png)
