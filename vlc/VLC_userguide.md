@@ -212,9 +212,15 @@ VLC 媒体播放器可帮助您创建媒体文件。创建媒体文件后，必�
 
 要为视频中的场景添加书签，请按照以下步骤操作：
 
-- 在菜单栏上，点击Menu ‣ Playback。
+1. 在菜单栏上，点击Menu ‣ Playback。
 
 ![figure_22](./images/figure_22.png)
 
+2. 选择自定义书签。当您单击自定义书签时，将显示一个下拉菜单。请从下拉菜单中单击管理以打开编辑书签对话框。
 
+![figure_23](./images/figure_23.png)
+
+3. 要创建书签，请单击创建以显示当前曲目。单击Create后，创建的书签会出现在Edit Bookmarks对话框中。
+
+![figure_24](./images/figure_24.png)
 
