@@ -520,3 +520,25 @@ VLC 热键是即使 VLC 没有焦点也可以使用的键盘快捷键。在这�
 单击View ‣ Advanced Controls以在Playback Controls正上方显示高级工具栏。此高级工具栏包含“录制”按钮。录制按钮可见后，单击它开始录制。
 
 ![figure_44](./images/figure_44.png)
+
+- 自定义界面
+
+选择Tools ‣ Customize interface menu 并将录制按钮拖动到第 2 行中您选择的任何位置。录制按钮可见后，单击它开始录制。第 2行是 VLC 上显示的默认行。
+
+#### 7.2 选择您的录音文件夹
+
+您可以修改用于存储录音的文件夹。要做到这一点：
+
+- 选择工具 ‣ 首选项或按。Ctrl+P
+
+![figure_45](./images/figure_45.png)
+
+2. 单击Input/Codecs，在Files下单击Browse...为您的录音选择一个位置。
+
+![figure_46](./images/figure_46.png)
+
+![figure_47](./images/figure_47.png)
+
+3. 点击保存。
+
+![figure_48](./images/figure_48.png)
