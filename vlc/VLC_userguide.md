@@ -425,7 +425,7 @@ DVD和SVCD字幕只是图像，因此您无法为它们更改任何内容。OGM�
 
 可以在Tools ‣ Preferences选项卡中更改文本渲染选项。要更改字体类型和大小，请单击Videos ‣ Subtitles/OSD，然后从Font and Font size下拉菜单中选择您的偏好。
 
-![figure_40](./images/figure_40.jpg)
+![figure_40](./images/figure_40.png)
 
 您需要重新启动流以使字体修改生效。
 
