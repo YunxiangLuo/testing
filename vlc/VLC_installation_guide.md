@@ -163,7 +163,7 @@ dnf update
 
 **Tips: 不要重启！！！不要重启！！！不要重启！！！** 
 
-### 3.1 安装VLC
+### 3.2 安装VLC
 
 - 执行下列指令
 
@@ -175,7 +175,7 @@ dnf install vlc
 
 - root 默认密码为 openEuler12#$
 
-### 3.2 启动vlc
+### 3.3 启动vlc
 
 - Xfce桌面下打开终端，输入`vlc` 启动 VLC。
 
