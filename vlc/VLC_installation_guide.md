@@ -122,8 +122,8 @@ sudo apt install qemu-system-riscv64 -y
 
 #### 2.1.1 下载内容
 
-- 下载 QEMU 目录下的[openeuler-qemu-xfce.raw.tar.zst](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220818/v0.1/QEMU/openeuler-qemu-xfce.raw.tar.zst)、[fw_payload_oe_qemuvirt.elf](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220818/v0.1/QEMU/fw_payload_oe_qemuvirt.elf) 和 [start_vm_xfce.sh](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220818/v0.1/QEMU/start_vm_xfce.sh)
-- 下载地址 [https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220818/v0.1/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220818/v0.1/QEMU/)
+- 下载 QEMU 目录下的[openeuler-qemu-xfce.raw.tar.zst](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/openeuler-qemu-xfce.raw.tar.zst)、[fw_payload_oe_qemuvirt.elf](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/fw_payload_oe_qemuvirt.elf) 和 [start_vm_xfce.sh](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/start_vm_xfce.sh)
+- 下载地址 [https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/)
 
 #### 2.1.2 部署和启动
 
@@ -144,7 +144,26 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.raw.tar.zst
 
 ## 3. 安装VLC
 
-### 3.1 安装VLC
+### 3.1 更换软件源
+
+编辑/etc/yum.repos.d/openEuler.repo文件
+
+将 `https://repo.tarsier-infra.com/openEuler-RISC-V/devel/20220808/v0.4/repo/22.03/` 替换为 `https://repo.tarsier-infra.com/openEuler-RISC-V/devel/20220822/v0.3/repo/22.03/`
+
+将 `https://repo.tarsier-infra.com/openEuler-RISC-V/devel/20220808/v0.4/repo/22.03Epol/` 替换为 `https://repo.tarsier-infra.com/openEuler-RISC-V/devel/20220822/v0.3/repo/22.03_Epol/`
+
+将 `https://repo.tarsier-infra.com/openEuler-RISC-V/devel/20220808/v0.4/repo/extra/` 替换为 `https://repo.tarsier-infra.com/openEuler-RISC-V/devel/20220822/v0.3/repo/extra/`
+
+后执行 
+
+```bash
+dnf update
+```
+在提示安装更新时输入 `n`
+
+**Tips: 不要重启！！！不要重启！！！不要重启！！！** 
+
+### 3.2 安装VLC
 
 - 执行下列指令
 
@@ -156,7 +175,7 @@ dnf install vlc
 
 - root 默认密码为 openEuler12#$
 
-### 3.2 启动vlc
+### 3.3 启动vlc
 
 - Xfce桌面下打开终端，输入`vlc` 启动 VLC。
 
