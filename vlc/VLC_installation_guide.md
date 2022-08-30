@@ -144,26 +144,7 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.raw.tar.zst
 
 ## 3. 安装VLC
 
-### 3.1 更换软件源
-
-编辑/etc/yum.repos.d/openEuler.repo文件
-
-将 `https://repo.tarsier-infra.com/openEuler-RISC-V/devel/20220808/v0.4/repo/22.03/` 替换为 `https://repo.tarsier-infra.com/openEuler-RISC-V/devel/20220822/v0.3/repo/22.03/`
-
-将 `https://repo.tarsier-infra.com/openEuler-RISC-V/devel/20220808/v0.4/repo/22.03Epol/` 替换为 `https://repo.tarsier-infra.com/openEuler-RISC-V/devel/20220822/v0.3/repo/22.03_Epol/`
-
-将 `https://repo.tarsier-infra.com/openEuler-RISC-V/devel/20220808/v0.4/repo/extra/` 替换为 `https://repo.tarsier-infra.com/openEuler-RISC-V/devel/20220822/v0.3/repo/extra/`
-
-后执行 
-
-```bash
-dnf update
-```
-在提示安装更新时输入 `n`
-
-**Tips: 不要重启！！！不要重启！！！不要重启！！！** 
-
-### 3.2 安装VLC
+### 3.1 安装VLC
 
 - 执行下列指令
 
@@ -175,7 +156,7 @@ dnf install vlc
 
 - root 默认密码为 openEuler12#$
 
-### 3.3 启动vlc
+### 3.2 启动vlc
 
 - Xfce桌面下打开终端，输入`vlc` 启动 VLC。
 
