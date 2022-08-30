@@ -163,3 +163,4 @@ vlc
 ```
 
 - 点击vlc图标启动VLC，见Application->Multimedia->vlc
+![1](./images/figure_67.PNG)
