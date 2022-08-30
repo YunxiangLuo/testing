@@ -162,4 +162,4 @@ dnf install vlc
 vlc
 ```
 
-- 点击vlc图标启动VLC，见Application->xxx，或Application->xxx->vlc
+- 点击vlc图标启动VLC，见Application->Multimedia->vlc
