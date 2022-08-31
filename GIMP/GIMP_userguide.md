@@ -86,11 +86,7 @@ GNU /Linux ™、 Apple macOS ™、 Microsoft Windows ™、 OpenBSD ™、 Net
 
 GIMP自动检测并使用系统语言。万一语言检测失败，或者如果您想使用不同的语言，使用GIMP -2.8 和更高版本，您可以通过以下方式进行：编辑→首选项→界面。
 
-您还可以使用：
-
-1. Linux下
-
-在 LINUX中：在控制台模式下，根据您想要的语言LANGUAGE=en gimp或LANG=en gimp背景：使用LANGUAGE=en为执行的程序设置环境变量gimp。
+在控制台模式下，根据您想要的语言LANGUAGE=en gimp或LANG=en gimp背景：使用LANGUAGE=en为执行的程序设置环境变量gimp。
 
 ### 2.3 命令行参数
 
