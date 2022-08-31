@@ -156,7 +156,7 @@ dnf install gimp
 
 - root 默认密码为 openEuler12#$
 
-### 3.2 启动Firefox
+### 3.2 启动GIMP
 
 - Xfce桌面下打开终端，输入`gimp` 启动 GIMP。
 
