@@ -164,4 +164,4 @@ gimp
 
 - 点击gimp图标启动GIMP，见Application->Graphics -> GNU Image Manipulation Program
 
-![启动画面](./images/figure_51.png)
+![GIMP UI](./images/figure_51.png)
