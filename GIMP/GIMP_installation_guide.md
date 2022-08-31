@@ -122,8 +122,8 @@ sudo apt install qemu-system-riscv64 -y
 
 #### 2.1.1 下载内容
 
-- 下载 QEMU 目录下的[openeuler-qemu-xfce.qcow2.tar.zst](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/openeuler-qemu-xfce.qcow2.tar.zst)、[fw_payload_oe_qemuvirt.elf](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/fw_payload_oe_qemuvirt.elf) 和 [start_vm_xfce.sh](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/start_vm_xfce.sh)
-- 下载地址 [https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/)
+- 下载 QEMU 目录下的[openeuler-qemu-xfce.raw.tar.zst](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220818/v0.1/QEMU/openeuler-qemu-xfce.raw.tar.zst)、[fw_payload_oe_qemuvirt.elf](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220818/v0.1/QEMU/fw_payload_oe_qemuvirt.elf) 和 [start_vm_xfce.sh](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220818/v0.1/QEMU/start_vm_xfce.sh)
+- 下载地址 [https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220818/v0.1/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220818/v0.1/QEMU/)
 
 #### 2.1.2 部署和启动
 
@@ -133,7 +133,7 @@ sudo apt install qemu-system-riscv64 -y
 
 ```bash
 sudo apt install zstd -y
-tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
+tar -I zstdmt -xvf ./openeuler-qemu-xfce.raw.tar.zst
 ```
 
 - 执行 `bash start_vm_xfce.sh`
@@ -143,6 +143,8 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
 - 输入密码完成登录，默认的用户名和密码为 `root` 和 `openEuler12#$`
 
 ## 3. 安装GIMP
+
+### 3.1 安装GIMP
 
 - 执行下列指令
 
@@ -154,12 +156,12 @@ dnf install gimp
 
 - root 默认密码为 openEuler12#$
 
-## 4. 启动gimp
+### 3.2 启动Firefox
 
-- Xfce桌面下打开终端，输入`gimp` 启动 gimp。
+- Xfce桌面下打开终端，输入`gimp` 启动 GIMP。
 
 ```shell
 gimp
 ```
 
-- 点击gimp图标启动gimp，见Application->Multimedia->gimp
+- 点击gimp图标启动GIMP，见Application->xxx，或Application->xxx->gimp
