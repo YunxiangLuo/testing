@@ -63,3 +63,7 @@ vlc
 ```
 
 - 点击vlc图标启动VLC，见Application->Multimedia，或Application->Multimedia->vlc
+
+### 附在WSL下通过qemu模拟的链接
+[在 WSL 通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统](https://github.com/ArielHeleneto/Work-PLCT/tree/master/qemuOnWSL)
+[通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统](https://github.com/ArielHeleneto/Work-PLCT/blob/master/awesomeqemu/README.md)
