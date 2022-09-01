@@ -1,120 +1,9 @@
 # VLC安装说明
 
-## 1. 编译支持视频输出的QEMU
+## 1. 编译安装支持视频输出的QEMU
 
-### 1.1 Ubuntu 20.04上基于源码安装qemu-rv64
-
-#### 1.1.1 通过QEMU源代码构建
-
-- 安装必要的构建工具
-
-```bash
-sudo apt install build-essential autoconf automake autotools-dev pkg-config bc curl gawk git bison flex texinfo gperf libtool patchutils mingw-w64 libmpc-dev libmpfr-dev libgmp-dev libexpat-dev libfdt-dev zlib1g-dev libglib2.0-dev libpixman-1-dev libncurses5-dev libncursesw5-dev meson libvirglrenderer-dev libsdl2-dev -y
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt install python3.9 python3-pip  -y
-sudo apt install -f
-pip3 install meson
-```
-
--  下载支持视频输出QEMU源码包方法1（2选1）
-
-注：如下载连接超时请重试几遍
-
-```bash
-git clone -b display https://gitlab.com/wangjunqiang/qemu.git
-```
-
-```bash
-cd qemu
-git submodule init
-git submodule update --recursive
-mkdir build
-cd build
-```
-
-- 下载支持视频输出QEMU源码包方法2（2选1）
-
-```bash
-wget https://download.qemu.org/qemu-7.0.0.tar.xz
-tar xvJf qemu-7.0.0.tar.xz
-cd qemu-7.0.0
-mkdir build
-cd build
-```
-
-- 配置riscv64-qemu
-
-以下命令中`xbot`为用户目录名
-
-```bash
-../configure  --enable-kvm --enable-sdl --enable-gtk --enable-virglrenderer --enable-opengl --target-list=riscv64-softmmu,riscv64-linux-user --prefix=/home/xbot/program/riscv64-qemu
-```
-
-`riscv-64-linux-user`为用户模式，可以运行基于 RISC-V 指令集编译的程序文件, `softmmu`为镜像模拟器，可以运行基于 RISC-V 指令集编译的Linux镜像，为了测试方便，可以两个都安装
-
-- 编译
-
-```bash
-make -j $(nproc)
-make install
-```
-
-如果 `--prefix` 指定的目录位于根目录下，则需要在 `./configure` 前加入 `sudo`
-
-#### 1.1.2 配置环境变量
-
-在环境变量PATH中添加riscv64-qemu所在目录，使相关命令可以直接使用
-
-```bash
-vim ~/.bashrc
-```
-
-`~/.bashrc`文末添加
-
-````bash
-export QEMU_HOME=/home/xbot/program/riscv64-qemu
-export PATH=$QEMU_HOME/bin:$PATH
-````
-
-**注意一定要将 `QEMU_HOME` 路径替换为 `--prefix` 定义的路径**
-
-检查是否添加成功
-
-```bash
-source ~/.bashrc
-echo $PATH
-```
-屏幕回显包含`/home/xbot/program/riscv64-qemu`
-
-```bash
-/home/xbot/program/riscv64-qemu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
-```
-
-#### 1.1.3 验证安装是否正确
-
-```bash
-qemu-system-riscv64 --version
-```
-
-如出现类似如下输出表示 QEMU 工作正常
-
-```bash
-QEMU emulator version 6.2.90 (v7.0.0-rc0-40-g2058fdbe81)
-Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
-```
-
-或
-
-```bash
-QEMU emulator version 7.0.0
-Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
-```
-
-### 1.2 Ubuntu 22.04直接使用apt安装qemu
-
-```bash
-sudo apt install qemu-system-riscv64 -y
-```
+- 略。详见[通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统](https://github.com/openeuler-mirror/RISC-V/blob/master/doc/tutorials/vm-qemu-oErv.md)
+- 注：镜像的安装部分有所不同，请参考以下镜像的下载安装。
 
 ## 2. 系统镜像的使用
 
@@ -122,27 +11,39 @@ sudo apt install qemu-system-riscv64 -y
 
 #### 2.1.1 下载内容
 
-- 下载 QEMU 目录下的[openeuler-qemu-xfce.qcow2.tar.zst](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/openeuler-qemu-xfce.qcow2.tar.zst)、[fw_payload_oe_qemuvirt.elf](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/fw_payload_oe_qemuvirt.elf) 和 [start_vm_xfce.sh](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/start_vm_xfce.sh)
-- 下载地址 [https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/)
+- 下载 QEMU 目录下的[openeuler-qemu-xfce.raw.tar.zst](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/openeuler-qemu-xfce.raw.tar.zst)和 [start_vm_xfce.sh](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/start_vm_xfce.sh)
+- 下载地址 [https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/)
+- 下载有音频驱动的内核(目录下内核没有音频驱动，需要更新内核),
+下载[内核](http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V:/Kernel/22.03/riscv64/opensbi-qemu-1.0-1.oe2203.riscv64.rpm)软件包，找到 fw_payload_oe_qemuvirt.elf并提取。
+
 
 #### 2.1.2 部署和启动
 
-- 解压 tar.zst 格式的镜像文件
+- 确认当前目录内包含 fw_payload_oe_qemuvirt.elf, 磁盘映像压缩包。
+- 解压映像压缩包或使用解压工具解压磁盘映像。
+- 调整启动参数
+- 执行启动脚本
 
 注：解压需要10.7G硬盘空间
 
 ```bash
 sudo apt install zstd -y
-tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
+tar -I zstdmt -xvf ./openeuler-qemu-xfce.raw.tar.zst
 ```
 
 - 执行 `bash start_vm_xfce.sh`
 
 注：QEMU下启动Xfce较慢，请耐心等待
 
-- 输入密码完成登录，默认的用户名和密码为 `root` 和 `openEuler12#$`
+   若终端提示
+```bash
+qemu-system-riscv64 - 'virtio-vga-gl' is not a valid device model name
+```
+则可将启动脚本的'-device virtio-vga \\' 一行更改为  'device virtio-gpu \\'
 
-## 3. 安装VLC
+## 3. 安装与启动VLC
+
+### 3.1 安装VLC
 
 - 执行下列指令
 
@@ -150,11 +51,10 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
 dnf install vlc
 ```
 
-- 安装过程中，有些包可能会已经以依赖的形式被安装了，没关系直接跳过。
+- 安装过程中，有些包可能会已经以依赖的形式被安装了,请忽略此类信息。
 
-- root 默认密码为 openEuler12#$
 
-## 4. 启动vlc
+### 3.2 启动vlc
 
 - Xfce桌面下打开终端，输入`vlc` 启动 VLC。
 
@@ -162,6 +62,9 @@ dnf install vlc
 vlc
 ```
 
-- 点击vlc图标启动VLC，见Application->Multimedia->vlc
+- 点击vlc图标启动VLC，见Application->Multimedia，或Application->Multimedia->vlc
 
-![vlc](./images/figure_67.PNG)
+### 附在WSL下通过qemu模拟risc-V,以及通过vnc或spice远程链接的文章链接
+[在 WSL 通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统](https://github.com/ArielHeleneto/Work-PLCT/tree/master/qemuOnWSL)
+
+[通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统](https://github.com/ArielHeleneto/Work-PLCT/blob/master/awesomeqemu/README.md)
