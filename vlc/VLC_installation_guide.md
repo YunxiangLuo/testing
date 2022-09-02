@@ -3,7 +3,7 @@
 ## 1. 编译安装支持视频输出的QEMU
 
 - 略。详见[通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统](https://github.com/openeuler-mirror/RISC-V/blob/master/doc/tutorials/vm-qemu-oErv.md)
-- 注：，镜像的安装部分有所不同，请参考以下镜像的下载安装。
+- 注：建议优先考虑发行版提供的软件包或在有能力的情况下自行打包，不鼓励非必要情况的编译安装。镜像的安装部分有所不同，请参考以下镜像的下载安装。
 
 ## 2. 系统镜像的使用
 
