@@ -3,7 +3,7 @@
 ## 1. 编译安装支持视频输出的QEMU
 
 - 略。详见[通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统](https://github.com/openeuler-mirror/RISC-V/blob/master/doc/tutorials/vm-qemu-oErv.md)
-- 注：镜像的安装部分有所不同，请参考以下镜像的下载安装。
+- 注：，镜像的安装部分有所不同，请参考以下镜像的下载安装。
 
 ## 2. 系统镜像的使用
 
@@ -11,8 +11,8 @@
 
 #### 2.1.1 下载内容
 
-- 下载 QEMU 目录下的[openeuler-qemu-xfce.raw.tar.zst](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/openeuler-qemu-xfce.raw.tar.zst)和 [start_vm_xfce.sh](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/start_vm_xfce.sh)
-- 下载地址 [https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220808/v0.4/QEMU/)
+- 下载 QEMU 目录下的[openeuler-qemu-xfce.qcow2.tar.zst](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/openeuler-qemu-xfce.qcow2.tar.zst)和 [start_vm_xfce.sh](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/devel/20220823/v0.1/QEMU/start_vm_xfce.sh)
+- [下载地址](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/)
 - 下载有音频驱动的内核(目录下内核没有音频驱动，需要更新内核),
 下载[内核](http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V:/Kernel/22.03/riscv64/opensbi-qemu-1.0-1.oe2203.riscv64.rpm)软件包，找到 fw_payload_oe_qemuvirt.elf并提取。
 
@@ -28,18 +28,14 @@
 
 ```bash
 sudo apt install zstd -y
-tar -I zstdmt -xvf ./openeuler-qemu-xfce.raw.tar.zst
+tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
 ```
 
 - 执行 `bash start_vm_xfce.sh`
 
 注：QEMU下启动Xfce较慢，请耐心等待
 
-   若终端提示
-```bash
-qemu-system-riscv64 - 'virtio-vga-gl' is not a valid device model name
-```
-则可将启动脚本的'-device virtio-vga \\' 一行更改为  'device virtio-gpu \\'
+脚本图像输出参数方面可能根据宿主机的环境变化而有些不同。若终端报错，可根据终端提醒，对脚本中'-display'与'-device virtio-vga//'两项进行更改，脚本参数更改具体据环境而变，可自行搜索学习，另外的方法为绕过直接图像输出使用vnc或spice等方式登陆远程桌面，详情可见附录(通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统)。
 
 ## 3. 安装与启动VLC
 
@@ -64,7 +60,8 @@ vlc
 
 - 点击vlc图标启动VLC，见Application->Multimedia，或Application->Multimedia->vlc
 
-### 附在WSL下通过qemu模拟risc-V,以及通过vnc或spice远程链接的文章链接
-[在 WSL 通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统](https://github.com/ArielHeleneto/Work-PLCT/tree/master/qemuOnWSL)
+### 附录及参考文章
+[在 WSL 通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统](https://github.com/ArielHeleneto/Work-PLCT/tree/master/qemuOnWSL) by [ArielHeleneto](https://github.com/ArielHeleneto)
 
-[通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统](https://github.com/ArielHeleneto/Work-PLCT/blob/master/awesomeqemu/README.md)
+[通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统](https://github.com/ArielHeleneto/Work-PLCT/blob/master/awesomeqemu/README.md) by [ArielHeleneto](https://github.com/ArielHeleneto)
+ 
