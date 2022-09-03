@@ -14,13 +14,14 @@
 - 下载 QEMU 目录下的[openeuler-qemu-xfce.qcow2.tar.zst](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/openeuler-qemu-xfce.qcow2.tar.zst), [fw_payload_oe_qemuvirt.elf](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/fw_payload_oe_qemuvirt.elf), [start_vm_xfce.sh](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/start_vm_xfce.sh), 
 - [下载地址](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/)
 - 下载有音频驱动的内核(QEMU目录下内核没有音频驱动，需要更新内核),
-linux环境下下载并解压[内核](http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V:/Kernel/22.03/riscv64/opensbi-qemu-1.0-1.oe2203.riscv64.rpm)软件包，找到 fw_payload_oe_qemuvirt.elf并提取，如若点击链接无反应，可尝试在新打开下载链接。
+
+linux用户可下载并直接解压[内核](http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V:/Kernel/22.03/riscv64/opensbi-qemu-1.0-1.oe2203.riscv64.rpm)软件包，找到 fw_payload_oe_qemuvirt.elf并提取，如若点击链接无反应，可尝试在新的窗口打开下载链接或使用火狐浏览器。若仍无法下载，可参阅附录（通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统）相关内容解决
 
 ![figure_68](./images/figure_68.png)
 
 如图，可在下载的rpm包下的"/./boot/"位置中找到此文件，然后选中提取
 
-windows系统下建议参阅附录使用WSL来运行，更新内核也在另一篇文章有其他可行的解决方法
+windows用户建议参阅附录使用WSL来运行，更新内核也在另一篇文章有其他可行的解决方法
 
 #### 2.1.2 部署和启动
 
