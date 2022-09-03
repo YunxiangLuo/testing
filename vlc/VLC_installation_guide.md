@@ -15,7 +15,8 @@
 - [下载地址](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/)
 - 下载有音频驱动的内核(QEMU目录下内核没有音频驱动，需要更新内核),
 linux环境下下载并解压[内核](http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V:/Kernel/22.03/riscv64/opensbi-qemu-1.0-1.oe2203.riscv64.rpm)软件包，找到 fw_payload_oe_qemuvirt.elf并提取，如若点击链接无反应，可尝试在新标签页打开下载链接。
-![figure_68](./image/figure_68)
+
+![figure_68](./image/figure_68.png)
 
 
 #### 2.1.2 部署和启动
