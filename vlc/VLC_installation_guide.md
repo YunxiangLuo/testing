@@ -1,5 +1,7 @@
 # VLC安装说明
 
+>注：请使用科学上网以查看图片
+
 ## 1. 编译安装支持视频输出的QEMU
 
 - 略。详见[通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统](https://github.com/openeuler-mirror/RISC-V/blob/master/doc/tutorials/vm-qemu-oErv.md)
