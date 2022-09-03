@@ -27,7 +27,7 @@ windows用户建议参阅附录使用WSL来运行，更新内核也在另一篇�
 
 #### 2.1.2 部署和启动
 
-- 确认当前目录内包含 fw_payload_oe_qemuvirt.elf, 磁盘映像压缩包。
+- 确认当前目录内包含`fw_payload_oe_qemuvirt.elf`, 磁盘映像压缩包，和启动脚本`start_vm_xfce.sh`。
 - 解压映像压缩包或使用解压工具解压磁盘映像。
 - 调整启动参数
 - 执行启动脚本
