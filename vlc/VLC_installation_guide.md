@@ -18,7 +18,8 @@ linux环境下下载并解压[内核](http://obs-backend.tarsier-infra.com:82/Fa
 
 ![figure_68](./images/figure_68.png)
 
-如图，可在下载的rpm包下的"//.//boot//"中找到此文件，然后
+如图，可在下载的rpm包下的"/./boot/"位置中找到此文件，然后选中提取
+windows系统下建议参阅附录使用WSL来运行，更新内核也在另一篇文章有其他可行的解决方法
 
 #### 2.1.2 部署和启动
 
