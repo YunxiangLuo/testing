@@ -9,6 +9,12 @@
 
 ## 2. 系统镜像的使用
 
+[使用D1开发板安装RISC-V](https://gitee.com/yunxiangluo/Learn-Risc-V-openEuler-Programming/blob/master/chapter1/lab2/README.md)
+
+[使用Visionfive开发板安装RISC-V](https://gitee.com/yunxiangluo/Learn-Risc-V-openEuler-Programming/blob/master/chapter1/lab3/README.md)
+
+[使用Unmatched开发板安装RISC-V](https://gitee.com/yunxiangluo/Learn-Risc-V-openEuler-Programming/blob/master/chapter1/lab4/README.md)
+
 ### 2.1 镜像下载
 
 #### 2.1.1 下载内容
