@@ -23,7 +23,9 @@
 - [下载地址](https://mirror.iscas.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/testing/20220823/v0.1/QEMU/)
 - 下载有音频驱动的内核(QEMU目录下内核没有音频驱动，需要更新内核),
 
-linux用户可下载并直接解压内核[http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V:/Kernel/22.03/riscv64/opensbi-qemu-1.0-1.oe2203.riscv64.rpm](http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V:/Kernel/22.03/riscv64/opensbi-qemu-1.0-1.oe2203.riscv64.rpm)软件包，找到 fw_payload_oe_qemuvirt.elf并提取，如若点击链接无反应，可尝试在新窗口下打开并刷新下载链接或使用火狐浏览器。若仍无法下载，可参阅附录（通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统）相关内容解决
+直接下载内核[https://github.com/YunxiangLuo/testing/blob/main/vlc/fw_payload_oe_qemuvirt.elf](https://github.com/YunxiangLuo/testing/blob/main/vlc/fw_payload_oe_qemuvirt.elf)
+
+或Linux用户可下载并直接解压内核，解压后的文件同上面直接下载的相同[http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V:/Kernel/22.03/riscv64/opensbi-qemu-1.0-1.oe2203.riscv64.rpm](http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V:/Kernel/22.03/riscv64/opensbi-qemu-1.0-1.oe2203.riscv64.rpm)软件包，找到 fw_payload_oe_qemuvirt.elf并提取，如若点击链接无反应，可尝试在新窗口下打开并刷新下载链接或使用火狐浏览器。若仍无法下载，可参阅附录（通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统）相关内容解决
 
 ![figure_68](./images/figure_68.png)
 
