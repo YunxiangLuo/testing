@@ -56,7 +56,7 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
 
 >目前该方案测试过的环境包括 WSL1(Ubuntu 20.04.4 LTS and Ubuntu 22.04.1 LTS) , Ubuntu 22.04.1 live-server LTS 和 Debian11.4。
 
-运行脚本中可能会出现‘pa‘报错或没有声音的情况，应该是本地机的qemu加载PulseAudio不成功的原因，可通过使用spice连接远程桌面来避免qemu直接加载PulseAudio而报错，且spice也支持声音共享
+运行脚本中可能会出现‘pa‘报错的情况，应该是本地机的qemu加载PulseAudio不成功的原因，可通过使用spice连接远程桌面来避免qemu直接加载PulseAudio而报错，且spice也支持声音共享
 
 - 下载并更换支持 spice 端口的[脚本](./start_vm.sh)。
 
