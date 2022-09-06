@@ -25,7 +25,7 @@
 
 直接下载内核[https://github.com/YunxiangLuo/testing/blob/main/vlc/fw_payload_oe_qemuvirt.elf](https://github.com/YunxiangLuo/testing/blob/main/vlc/fw_payload_oe_qemuvirt.elf)
 
-或Linux用户可下载并直接解压内核，解压后的文件同上面直接下载的相同[http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V:/Kernel/22.03/riscv64/opensbi-qemu-1.0-1.oe2203.riscv64.rpm](http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V:/Kernel/22.03/riscv64/opensbi-qemu-1.0-1.oe2203.riscv64.rpm)软件包，找到 fw_payload_oe_qemuvirt.elf并提取，如若点击链接无反应，可尝试在新窗口下打开并刷新下载链接或使用火狐浏览器。若仍无法下载，可参阅附录（通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统）相关内容解决
+或Linux用户可下载并直接解压内核，解压后的文件同上面,直接下载[软件包](http://obs-backend.tarsier-infra.com:82/Factory:/RISC-V:/Kernel/22.03/riscv64/opensbi-qemu-1.0-1.oe2203.riscv64.rpm)，找到 fw_payload_oe_qemuvirt.elf并提取，如若点击链接无反应，可尝试在新窗口下打开并刷新下载链接或使用火狐浏览器。若仍无法下载，可参阅附录（通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统）相关内容解决
 
 ![figure_68](./images/figure_68.png)
 
@@ -63,7 +63,21 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
 
 运行脚本中可能会出现‘pa‘报错或没有声音的情况，应该是本地机的qemu加载PulseAudio不成功的原因，可通过使用spice连接远程桌面来避免qemu直接加载PulseAudio而报错，且spice也支持声音共享
 
-- 下载支持spice端口的
+- 下载支持 spice 端口的[脚本](./start_vm.sh)。
+- 调整脚本参数并运行脚本，注意此脚本并不会直接打开qemu的图形化窗口，需要使用 spice 连接后才会弹出窗口
+- 安装 virt-viewer 并使用 spice 连接虚拟机
+linux环境下（以Debian为例）
+```bash
+sudo apt install virt-viewer            #安装virt-viewer
+remote-viewer spice://localhost:12057   #使用spice连接虚拟机
+```
+
+windows下
+- 安装 Virt-Viewer
+点击[此处](https://virt-manager.org/download/)前往下载地址，下载 virt-viewer 11.0 。如果速度较慢请考虑科学上网。
+
+- 连接到 SPICE
+粘贴地址点击连接即可。操作界面和远程桌面类似。
 
 ## 3. 安装与启动VLC
 
