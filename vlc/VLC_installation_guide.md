@@ -64,7 +64,7 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
 
 ![figure_69](./images/figure_69.png)
 
-复制点开的页面网址就可以使用 wget 了
+复制打开的页面网址就可以使用 wget 了
 
 注意Windows Powershell的wget需要指定输出文件名
 
