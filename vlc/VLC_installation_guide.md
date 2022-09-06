@@ -66,6 +66,7 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
 - 下载支持 spice 端口的[脚本](./start_vm.sh)。
 - 调整脚本参数并运行脚本，注意此脚本并不会直接打开qemu的图形化窗口，需要使用 spice 连接后才会弹出窗口
 - 安装 virt-viewer 并使用 spice 连接虚拟机
+
 linux环境下（以Debian为例）
 ```bash
 sudo apt install virt-viewer            #安装virt-viewer
