@@ -59,15 +59,16 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
 运行脚本中可能会出现‘pa‘报错或没有声音的情况，应该是本地机的qemu加载PulseAudio不成功的原因，可通过使用spice连接远程桌面来避免qemu直接加载PulseAudio而报错，且spice也支持声音共享
 
 - 下载并更换支持 spice 端口的[脚本](./start_vm.sh)。
+
 点开后点击右上角的 raw
 
-![figure_69](./image/figure_69.png)
+![figure_69](./images/figure_69.png)
 
 复制点开的页面网址就可以使用 wget 了
 
 注意Windows Powershell的wget需要指定输出文件名
 
-![figure_70](./image/figure_70.png)
+![figure_70](./images/figure_70.png)
 
 或者直接复制脚本代码然后本地新建文本文档然后黏贴另存为.sh文件
 
