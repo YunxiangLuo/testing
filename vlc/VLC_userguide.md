@@ -672,3 +672,11 @@ http://stream4.iqilu.com/ksd/video/2020/02/17/c5e02420426d58521a8783e754e9f4e6.m
 - 音频
 http://downsc.chinaz.net/Files/DownLoad/sound1/201906/11582.mp3
 http://downsc.chinaz.net/files/download/sound1/201206/1638.mp3
+
+```bash
+wget https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218114723HDu3hhxqIT.mp4
+wget https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218025702PSiVKDB5ap.mp4
+wget http://stream4.iqilu.com/ksd/video/2020/02/17/c5e02420426d58521a8783e754e9f4e6.mp4
+wget http://downsc.chinaz.net/Files/DownLoad/sound1/201906/11582.mp3
+wget http://downsc.chinaz.net/files/download/sound1/201206/1638.mp3
+```
