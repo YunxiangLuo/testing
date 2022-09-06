@@ -61,13 +61,13 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
 - 下载并更换支持 spice 端口的[脚本](./start_vm.sh)。
 点开后点击右上角的 raw
 
-![figure_69](./image/figure_69)
+![figure_69](./image/figure_69.png)
 
 复制点开的页面网址就可以使用 wget 了
 
 注意Windows Powershell的wget需要指定输出文件名
 
-![figure_70](./image/figure_70)
+![figure_70](./image/figure_70.png)
 
 或者直接复制脚本代码然后本地新建文本文档然后黏贴另存为.sh文件
 
