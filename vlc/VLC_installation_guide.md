@@ -35,6 +35,10 @@ windows用户建议参阅附录使用WSL来运行，更新内核也在另一篇�
 
 #### 2.1.2 部署和启动
 
+#### 2.1.21 直接启动支持xfce的脚本
+
+>已验证启动脚本在 Ubuntu20.04 ，Debian11.4环境下正常运行 
+
 - 确认当前目录内包含`fw_payload_oe_qemuvirt.elf`, 磁盘映像压缩包，和启动脚本`start_vm_xfce.sh`。
 - 解压映像压缩包或使用解压工具解压磁盘映像。
 - 调整启动参数
@@ -52,6 +56,14 @@ tar -I zstdmt -xvf ./openeuler-qemu-xfce.qcow2.tar.zst
 注：QEMU下启动Xfce较慢，请耐心等待
 
 脚本图像输出参数方面可能根据宿主机的环境变化而有些不同。若终端报错，可根据终端提醒，对脚本中'-display'与'-device virtio-vga/'两项进行更改，脚本参数更改具体据环境而变，可自行搜索学习，另外的方法为绕过直接图像输出使用vnc或spice等方式登陆远程桌面，详情可见附录(通过 QEMU 仿真 RISC-V 环境并启动 OpenEuler RISC-V 系统)。
+
+#### 2.1.22 使用spice远程连接桌面
+
+>目前该方案测试过的环境包括 WSL1(Ubuntu 20.04.4 LTS and Ubuntu 22.04.1 LTS) , Ubuntu 22.04.1 live-server LTS 和 Debian11.4。
+
+运行脚本中可能会出现‘pa‘报错或没有声音的情况，应该是本地机的qemu加载PulseAudio不成功的原因，可通过使用spice连接远程桌面来避免qemu直接加载PulseAudio而报错，且spice也支持声音共享
+
+- 下载支持spice端口的
 
 ## 3. 安装与启动VLC
 
