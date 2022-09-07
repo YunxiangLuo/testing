@@ -2,7 +2,7 @@
 
 注：请使用科学上网工具，如未使用无法显示文档中的图片。文章末尾附带了可用的测试视频与音频链接，如有需要可自行取用。
 
-目前vlc视频解码依然有问题，视频播放会出现黑屏，需要在 tools-performance-video 处将 output 改为 X11 video output ，之后便可观看到正常影像，但该方式为软解码，流畅度与清晰度不能作保证。
+目前vlc视频解码依然有问题，视频播放会出现黑屏，需要在 tools-performance-video 处将 output 改为 X11 video output ，之后便可观看到正常影像，由于QEMU为软解码，流畅度与清晰度在有显卡的硬件环境下会更好。
 
 ![figure_71](./images/figure_71.png)
 ![figure_72](./images/figure_72.png)
