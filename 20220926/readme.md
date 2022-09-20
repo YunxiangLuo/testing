@@ -15,5 +15,8 @@
 1. 应可以正常启动
 2. 应自动支持wifi
 3. 应自带xfce，功能正常
-4. 应可以成功安装和卸载firefox、LibreOffice、
+4. 应可以成功安装和卸载Firefox、LibreOffice
+5. Firefox、LibreOffice可正常启动，基本功能正常
+
+（以下可选）
 
