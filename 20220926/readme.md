@@ -22,9 +22,9 @@
 
 如2. 应自动支持wifi无法满足，<b>应提供自带支持的wifi网卡列表，对常见wifi网卡（Intel）提供驱动安装资源和安装文档</b>
 
-如2. 应自动支持wifi无法满足，应镜像预装Xfce、Firefox、LibreOffice、vlc、GIMP、vim、terminal、Thunderbird等软件
+如2. 应自动支持wifi无法满足，<b>应镜像预装Xfce、Firefox、LibreOffice、vlc、GIMP、vim、terminal、Thunderbird等软件</b>
 
-如6. 支持存储空间扩容无法满足，应镜像预装Xfce、Firefox、LibreOffice、vlc、GIMP、vim、terminal、Thunderbird等软件
+如6. 支持存储空间扩容无法满足，<b>应镜像预装Xfce、Firefox、LibreOffice、vlc、GIMP、vim、terminal、Thunderbird等软件</b>
 
 ### QEMU
 
