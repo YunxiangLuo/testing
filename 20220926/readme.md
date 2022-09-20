@@ -15,16 +15,19 @@
 1. 应可以正常启动
 2. 应自动支持wifi
 3. 应自带xfce，功能正常（终端、截屏、显示设置等）
-4. 应可以成功安装和卸载Firefox、LibreOffice
-5. Firefox、LibreOffice可正常启动，基本功能正常
+4. 应可以成功安装和卸载Firefox、LibreOffice、vlc（已可以）、GIMP（已可以）
+5. Firefox、LibreOffice、vlc、GIMP可正常启动，基本功能正常
 6. 支持存储空间扩容，提供扩容说明文档和命令
 7. 提供刷机镜像文件（可直接下载）
 
 ### QEMU
 
 1. 应可以正常启动
-2. 应自带xfce，功能正常（终端、截屏、显示设置等）
-3. 应可以成功安装和卸载Firefox、LibreOffice
-4. 声卡支持
+2. 声卡支持
+3. 应自带xfce，功能正常（终端、截屏、显示设置等）
+4. 应可以成功安装和卸载Firefox、LibreOffice、GIMP
 5. Firefox、LibreOffice可正常启动，基本功能正常
 6. 提供安装文件和启动脚本（可直接下载）
+
+### Nice to have
+1. 提供其它列表上的软件，可正常安装、卸载、启动和基本功能正常（不需要手工配置）
