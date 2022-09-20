@@ -20,7 +20,7 @@
 - [x] 6. 支持存储空间扩容，提供扩容说明文档和命令
 - [x] 7. 提供刷机镜像文件（可直接下载）
 
-如2. 应自动支持wifi无法满足，应提供自带支持的wifi网卡列表，对常见wifi网卡（Intel）提供驱动安装资源和安装文档
+如2. 应自动支持wifi无法满足，<b>应提供自带支持的wifi网卡列表，对常见wifi网卡（Intel）提供驱动安装资源和安装文档</b>
 
 如2. 应自动支持wifi无法满足，应镜像预装Xfce、Firefox、LibreOffice、vlc、GIMP、vim、terminal、Thunderbird等软件
 
