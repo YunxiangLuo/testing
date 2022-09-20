@@ -4,7 +4,7 @@
 
 ## 缺陷修改截至时间：20220926（下周一）上午10点
 
-## 提交规则：ORSP004
+## 提交规则：[ORSP004](https://gitee.com/openeuler/RISC-V/blob/master/proposal/ORSP004.md)
 
 ## 责任人：周嘉成
 
