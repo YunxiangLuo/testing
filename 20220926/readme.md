@@ -43,12 +43,13 @@
 > eclipse can not run as root, ? remove from preinstalled 
 
 > failed to remove libreoffice 
-'''
+
+```
 [root@openEuler-riscv64 ~]# dnf remove libreoffice
 Error: 
  Problem: The operation would result in removing the following protected packages: dnf
 (try to add '--skip-broken' to skip uninstallable packages or '--nobest' to use not only best candidate packages)
-'''
+```
 
 - [x] 6. 提供安装文件和启动脚本（可直接下载）
 
