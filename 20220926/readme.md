@@ -28,9 +28,11 @@
 
 ### QEMU
 
-- [] 1. 应可以正常启动
+- [ ] 1. 应可以正常启动
 > reboot black screen
+
 > boot very slow
+
 - [x] 2. 声卡支持
 - [x] 3. 应自带xfce，功能正常（终端、截屏、显示设置等）
 - [x] 4. 应可以成功安装和卸载Firefox、LibreOffice、GIMP
