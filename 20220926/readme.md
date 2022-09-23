@@ -40,13 +40,6 @@
 
 - [x] 5. Firefox、LibreOffice可正常启动，基本功能正常
 
-> open bilibili.com very slow
-
-> terminal information
-'''
-
-'''
-
 - [x] 6. 提供安装文件和启动脚本（可直接下载）
 
 ### Nice to have
