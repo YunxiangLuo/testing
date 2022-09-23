@@ -33,13 +33,14 @@
 > reboot black screen
 
 - [x] 2. 声卡支持
-
+  
 - [x] 3. 应自带xfce，功能正常（终端、截屏、显示设置等）
 
 - [x] 4. 应可以成功安装和卸载Firefox、LibreOffice、GIMP
 
 - [x] 5. Firefox、LibreOffice可正常启动，基本功能正常
 
+> eclipse can not run as root, ? remove from preinstall
 - [x] 6. 提供安装文件和启动脚本（可直接下载）
 
 ### Nice to have
