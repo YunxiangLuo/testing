@@ -27,6 +27,7 @@ P5 / wishlist
 > 计划9月26日星期一收到提交测试的镜像和软件源
 
 - [ ] 1. 刷写到TF卡上的镜像，应可以正常启动(P1)
+- [ ] 2. 刷写到nvme卡上的镜像，应可以正常启动。同时提供安装和设置文档。(P2)
 - [ ] 2. 镜像应自动支持wifi(P2)
 - [ ] 3. 镜像应自带xfce，功能正常（终端、截屏、显示设置等）(P2)
 - [ ] 4. 镜像应可以成功安装（P3）和卸载（P4）以下软件，Firefox、LibreOffice、Chrome browser、vlc、GIMP
@@ -48,19 +49,15 @@ P5 / wishlist
 
 - [x] 2. 声卡支持(P2)
   
-- [x] 3. 应自带xfce，功能正常（终端、截屏、显示设置等）
+- [x] 3. 镜像应自带xfce，功能正常（终端、截屏、显示设置等）(P2)
 
-- [x] 4. 应可以成功安装和卸载Firefox、LibreOffice、GIMP
+- [x] 4. 镜像应可以成功安装（P3）和卸载（P4）以下软件，Firefox、LibreOffice、Chrome browser、vlc、GIMP
 
-- [ ] 5. Firefox、LibreOffice可正常启动，基本功能正常
+- [ ] 5. 以下软件，Firefox、LibreOffice、Chrome browser、vlc、GIMP，应可正常启动，基本功能正常(P2)
 
-> P4
 > eclipse can not run as root, 建议从预装软件中删除  
 
-> p4
 > failed to remove libreoffice，建议修复卸载问题
-
-> vlc使用上游社区新代码后，性能显著改善，且修复了之前的打开视频黑屏问题，建议预装
 
 ```
 [root@openEuler-riscv64 ~]# dnf remove libreoffice
@@ -69,7 +66,9 @@ Error:
 (try to add '--skip-broken' to skip uninstallable packages or '--nobest' to use not only best candidate packages)
 ```
 
-- [x] 6. 提供安装文件和启动脚本（可直接下载）
+> vlc使用上游社区新代码后，性能显著改善，且修复了之前的打开视频黑屏问题，建议预装
+
+- [x] 6. 提供安装文件和启动脚本（可直接下载）(P1)
 
 ### 自动化测试
 
