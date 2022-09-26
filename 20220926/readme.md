@@ -26,14 +26,14 @@ P5 / wishlist
 
 > 计划9月26日星期一收到提交测试的镜像和软件源
 
-- [ ] 1. 刷写到TF卡上的镜像，应可以正常启动(P1)
-- [ ] 2. 刷写到nvme卡上的镜像，应可以正常启动。同时提供安装和设置文档。(P2)
-- [ ] 2. 镜像应自动支持wifi(P2)
-- [ ] 3. 镜像应自带xfce，功能正常（终端、截屏、显示设置等）(P2)
-- [ ] 4. 镜像应可以成功安装（P3）和卸载（P4）以下软件，Firefox、LibreOffice、Chrome browser、vlc、GIMP
-- [ ] 5. 以下软件，Firefox、LibreOffice、Chrome browser、vlc、GIMP，应可正常启动，基本功能正常(P2)
-- [ ] 6. 镜像支持存储空间扩容，提供扩容说明文档和命令(P3)
-- [ ] 7. 应提供刷机镜像文件（可直接下载）（P1)
+- [ ] 1.1 刷写到TF卡上的镜像，应可以正常启动(P1)
+- [ ] 1.2 刷写到nvme卡上的镜像，应可以正常启动。同时提供安装和设置文档。(P2)
+- [ ] 1.3 镜像应自动支持wifi(P2)
+- [ ] 1.4（同2.3） 镜像应自带xfce，功能正常（终端、截屏、显示设置等）(P2)
+- [ ] 1.5（同2.4） 镜像应可以成功安装（P3）和卸载（P4）以下软件，Firefox、LibreOffice、Chrome browser、vlc、GIMP
+- [ ] 1.6（同2.5）以下软件，Firefox、LibreOffice、Chrome browser、vlc、GIMP，应可正常启动，基本功能正常(P2)
+- [ ] 1.7 镜像支持存储空间扩容，提供扩容说明文档和命令(P3)
+- [ ] 1.8 应提供刷机镜像文件（可直接下载）（P1)
 
 如2. 应自动支持wifi无法满足，<b>应提供自带支持的wifi网卡列表，对常见wifi网卡（Intel）提供驱动安装资源和安装文档</b>
 
@@ -43,17 +43,17 @@ P5 / wishlist
 
 ### QEMU
 
-- [ ] 1. 应可以正常启动(P1)
+- [ ] 2.1 应可以正常启动(P1)
 
 > 重启黑屏，建议修改替换启动脚本
 
-- [x] 2. 声卡支持(P2)
+- [x] 2.2 声卡支持(P2)
   
-- [x] 3. 镜像应自带xfce，功能正常（终端、截屏、显示设置等）(P2)
+- [x] 2.3 镜像应自带xfce，功能正常（终端、截屏、显示设置等）(P2)
 
-- [x] 4. 镜像应可以成功安装（P3）和卸载（P4）以下软件，Firefox、LibreOffice、Chrome browser、vlc、GIMP
+- [x] 2.4 镜像应可以成功安装（P3）和卸载（P4）以下软件，Firefox、LibreOffice、Chrome browser、vlc、GIMP
 
-- [ ] 5. 以下软件，Firefox、LibreOffice、Chrome browser、vlc、GIMP，应可正常启动，基本功能正常(P2)
+- [ ] 2.5 以下软件，Firefox、LibreOffice、Chrome browser、vlc、GIMP，应可正常启动，基本功能正常(P2)
 
 > eclipse can not run as root, 建议从预装软件中删除  
 
@@ -68,7 +68,7 @@ Error:
 
 > vlc使用上游社区新代码后，性能显著改善，且修复了之前的打开视频黑屏问题，建议预装
 
-- [x] 6. 提供安装文件和启动脚本（可直接下载）(P1)
+- [x] 2.6 提供安装文件和启动脚本（可直接下载）(P1)
 
 ### 自动化测试
 
