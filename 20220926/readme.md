@@ -30,9 +30,9 @@ P5 / wishlist
 - [ ] 1. 应可以正常启动(p1)
 - [ ] 2. 应自动支持wifi(p2)
 - [ ] 3. 应自带xfce，功能正常（终端、截屏、显示设置等）(p2)
-- [ ] 4. 应可以成功安装和卸载Firefox、LibreOffice、vlc（已可以）、GIMP（已可以）(p2)
+- [ ] 4. 应可以成功安装Firefox、LibreOffice、Chrome browser、vlc、GIMP（p3）,应可以成功卸载（p4）
 - [ ] 5. Firefox、LibreOffice、vlc、GIMP可正常启动，基本功能正常(p2)
-- [ ] 6. 支持存储空间扩容，提供扩容说明文档和命令(p2)
+- [ ] 6. 支持存储空间扩容，提供扩容说明文档和命令(p3)
 - [ ] 7. 提供刷机镜像文件（可直接下载）（p1)
 
 如2. 应自动支持wifi无法满足，<b>应提供自带支持的wifi网卡列表，对常见wifi网卡（Intel）提供驱动安装资源和安装文档</b>
