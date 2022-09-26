@@ -30,7 +30,7 @@
 
 - [ ] 1. 应可以正常启动
 
-> reboot black screen
+> 重启黑屏，建议修改替换启动脚本
 
 - [x] 2. 声卡支持
   
@@ -40,9 +40,11 @@
 
 - [ ] 5. Firefox、LibreOffice可正常启动，基本功能正常
 
-> eclipse can not run as root, ? remove from preinstalled 
+> eclipse can not run as root, 建议从预装软件中删除 
 
-> failed to remove libreoffice 
+> failed to remove libreoffice，建议修复卸载问题
+
+> vlc使用上游社区新代码后，性能显著改善，且修复了之前的打开视频黑屏问题，建议预装
 
 ```
 [root@openEuler-riscv64 ~]# dnf remove libreoffice
@@ -54,6 +56,8 @@ Error:
 - [x] 6. 提供安装文件和启动脚本（可直接下载）
 
 ### 自动化测试
+
+> 发现有问题测试套/软件10个，建议修复，优先级中
 
 | 测试套/软件        | 测试用例总数 | 通过 | 未通过 | 备注                                                         | 总测试套数 | 总测试用例数 |
 | ------------------ | ------------ | ---- | ------ | ------------------------------------------------------------ | ---------- | ------------ |
