@@ -8,7 +8,6 @@
 ## 创建数据库
 
 - 打开Base弹出向导：创建数据库、打开数据库文件、导入数据库
-
 - BUG：创建数据库功能不可用
 
 ![](./Pictures/Screenshot_20221014_144933.png)
@@ -46,5 +45,3 @@
 ## 查看数据源内容
 
 - [帮助链接](https://help.libreoffice.org/latest/zh-CN/text/shared/01/04180100.html?&DbPAR=SHARED&System=UNIX)
-
-## 
