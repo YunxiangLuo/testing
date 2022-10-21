@@ -30,8 +30,8 @@
 
 ## 3.2   约束说明
 
-- [安装说明]()
-- [使用说明]()
+- [安装说明](./Calc_installation_guide.md)
+- [使用说明](./Calc_userguide.md)
 
 ## 3.3 测试要求
 
