@@ -45,7 +45,7 @@
 
 ## 3.4   测试项
 
-参考本测试[安装说明]()、[使用说明]()和[官方使用说明](https://help.libreoffice.org/7.3/zh-CN/text/scalc/main0000.html?DbPAR=CALC)。此项目对LibreOffice Calc的安装和基本功能开展测试。
+参考本测试[安装说明](./Calc_installation_guide.md)、[使用说明](./Calc_userguide.md)和[官方使用说明](https://help.libreoffice.org/7.3/zh-CN/text/scalc/main0000.html?DbPAR=CALC)。此项目对LibreOffice Calc的安装和基本功能开展测试。
 
 # 4. 测试执行
 
