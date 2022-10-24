@@ -1,8 +1,8 @@
-# openEuler 22.03-V1 RISC-V版本LibreOffice Calc特性测试
+# openEuler 22.03-V1 RISC-V版本LibreOffice Writer特性测试
 
 # 1. 测试目的
 
-使用openEuler 22.03-V1 RISC-V版本镜像，测试LibreOffice Calc的安装和基本功能运行是否正常。
+使用openEuler 22.03-V1 RISC-V版本镜像，测试LibreOffice Writer的安装和基本功能运行是否正常。
 
 # 2. 测试信息
 
@@ -24,14 +24,14 @@
 
 | 测试内容 | 测试要求                         |
 | -------- | -------------------------------- |
-| 安装测试 | 在openEuler RISC-V QEMU上安装LibreOffice Calc |
-| 功能测试 | 覆盖测试点，LibreOffice Calc基本功能运行正常  |
+| 安装测试 | 在openEuler RISC-V QEMU上安装LibreOffice Writer |
+| 功能测试 | 覆盖测试点，LibreOffice Writer基本功能运行正常  |
 | 专项测试 | 无                               |
 
 ## 3.2   约束说明
 
-- [安装说明](./Calc_installation_guide.md)
-- [使用说明](./Calc_userguide.md)
+- [安装说明](./Writer_installation_guide.md)
+- [使用说明](./Writer_userguide.md)
 
 ## 3.3 测试要求
 
@@ -45,7 +45,7 @@
 
 ## 3.4   测试项
 
-参考本测试[安装说明](./Calc_installation_guide.md)、[使用说明](./Calc_userguide.md)和[官方使用说明](https://help.libreoffice.org/7.3/zh-CN/text/scalc/main0000.html?DbPAR=CALC)。此项目对LibreOffice Calc的安装和基本功能开展测试。
+参考本测试[安装说明](./Writer_installation_guide.md)、[使用说明](./Writer_userguide.md)和[官方使用说明](https://help.libreoffice.org/7.3/zh-CN/text/swriter/main0000.html?DbPAR=WRITER)。此项目对LibreOffice Writer的安装和基本功能开展测试。
 
 # 4. 测试执行
 

@@ -1,6 +1,6 @@
 # LibreOffice Calc使用说明
 
-ibreOffice Calc（又称Calc)是LibreOffice生产力软件的项目之一,可用于计算、分析和管理数据,也可用于导入和编辑 Microsoft Excel 电子表格，是与Microsoft Excel功能相当的电子表格软件。
+LibreOffice Calc（又称Calc)是LibreOffice生产力软件的项目之一,可用于计算、分析和管理数据,也可用于导入和编辑 Microsoft Excel 电子表格，是与Microsoft Excel功能相当的电子表格软件。
 
 LibreOffice电子表格通常会默认以OpenDocument Format（ODF）的格式存储。但也支持CSV, HTML, SXC, DBF, DIF, UOF, SLK, SDC等格式。
 
