@@ -10,7 +10,7 @@
 
 |    Package  |   Arch   |            Version        |    Reop    | Total_Size|
 | --------------- | ---------- | --------------------------|------------- |--------------- |
-| eclipse-jdt | riscv64 | 103.0.5060.114-1.oe2203.riscv64    | mainline |     119M    |
+| Chromium | riscv64 | 103.0.5060.114-1.oe2203.riscv64    | mainline |         |
 
 ## 2.2 硬件环境信息
 
