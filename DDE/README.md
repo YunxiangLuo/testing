@@ -30,8 +30,8 @@
 
 ## 3.2 约束说明
 
-- [安装说明](./DDE_installation_guide.md)
-- [使用说明](./DDE_userguide.md)
+- [安装说明](./Deepin_installation_guide.md)
+- [使用说明](./Deepin_userguide.md)
 
 ## 3.3 测试要求
 
