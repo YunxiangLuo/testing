@@ -1,8 +1,8 @@
-# openEuler 22.03-V1 RISC-V 版本 MySQL 特性测试
+# openEuler 22.03 RISC-V 版本 MySQL 特性测试
 
 # 1. 测试目的
 
-使用 openEuler 22.03-V1 RISC-V 版本镜像，测试 MySQL 的安装和基本功能运行是否正常。
+使用 openEuler 22.03 RISC-V 版本镜像，测试 MySQL 的安装和基本功能运行是否正常。
 
 # 2. 测试信息
 
