@@ -70,7 +70,7 @@ Process 3 exiting
 Process 1 exiting
 ```
 
-## 2. 构建 OpenMPI 其他程序并测试
+## 2. 构建其他程序并测试
 
 1. 获取测试用的仓库
 
