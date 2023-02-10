@@ -57,7 +57,7 @@ wall clock time = 0.000027
 输出如下：
 
 ```
-mpirun -n 4  ./mpi-scatter-gather-and-allgather/code/all_avg 100
+mpirun -n 4 ./mpi-scatter-gather-and-allgather/code/all_avg 100
 Avg of all elements from proc 0 is 0.499618
 Avg of all elements from proc 1 is 0.499618
 Avg of all elements from proc 2 is 0.499618
@@ -73,7 +73,7 @@ Avg of all elements from proc 3 is 0.499618
 输出如下：
 
 ```
-mpirun -n 2  ./mpi-send-and-receive/code/ping_pong
+mpirun -n 2 ./mpi-send-and-receive/code/ping_pong
 0 sent and incremented ping_pong_count 1 to 1
 0 received ping_pong_count 2 from 1
 0 sent and incremented ping_pong_count 3 to 1
@@ -105,9 +105,27 @@ mpirun -n 2  ./mpi-send-and-receive/code/ping_pong
 输出如下：
 
 ```
-mpirun -n 4  ./performing-parallel-rank-with-mpi/code/random_rank 100
+mpirun -n 4 ./performing-parallel-rank-with-mpi/code/random_rank 100
 Rank for 0.840188 on process 0 - 1
 Rank for 0.045389 on process 1 - 0
 Rank for 0.914437 on process 2 - 2
 Rank for 0.982946 on process 3 - 3
+```
+
+## 3. 进阶测试
+
+### 3.1 并行矩阵乘法
+
+该测试用例涵盖了对 MPI 库所提供的消息传递和并行测试。
+
+1. 将 [并行矩阵乘法 C 语言源代码](../MPI%20%E7%A8%8B%E5%BA%8F%E6%BA%90%E4%BB%A3%E7%A0%81/matrix_multiplication.c) 保存并编译为 MPI 程序；
+
+```
+mpicc matrix_multiplication.c -o matrix_multiplication
+```
+
+2. 使用 mpirun 运行程序
+
+```
+mpirun -np 4 ./matrix_multiplication
 ```
