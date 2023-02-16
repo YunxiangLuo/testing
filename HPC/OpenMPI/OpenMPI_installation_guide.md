@@ -30,9 +30,40 @@ bash start_vm.sh
 
 3. 登录用户，默认的用户名为 `openeuler` ，密码为 `openEuler12#$`。注意，OpenMPI 默认不允许使用 `root` 用户来运行。
 
-## 3. 编译与安装 OpenMPI
+## 3. 安装 OpenMPI
 
-### 3.1 获取源代码
+### 3.1 直接从 `dnf` 安装现有版本
+
+1. 执行以下指令；
+
+```
+$ sudo dnf install openmpi
+```
+
+提示 `Complete!` 即安装完成；
+
+2. 使用编辑器编辑 shell 的 profile；
+
+3. 添加环境变量；
+
+```
+export PATH="/usr/lib64/openmpi/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/lib64/openmpi/lib:$LD_LIBRARY_PATH"
+```
+
+4. 重载 profile；
+
+5. 执行以下命令，检查环境变量是否正常；
+
+```
+$ which mpirun
+```
+
+若回显 `/usr/lib64/openmpi/bin/mpirun`，则环境变量配置正常，安装完成。
+
+### 3.2 从源码编译最新版本
+
+#### 3.2.1 获取源代码
 
 1. 在 [OpenMPI 网站](https://www.open-mpi.org/software/)下载最新稳定版源代码压缩文件 `openmpi-4.1.4.tar.bz2`；
 
@@ -42,7 +73,7 @@ bash start_vm.sh
 $ tar -xjf ./openmpi-4.1.4.tar.bz2
 ```
 
-### 3.2 编译与安装
+#### 3.2.2 编译与安装
 
 1. 进入解压输出文件所在文件夹；
 
@@ -70,7 +101,7 @@ $ make -j$(nproc) all
 $ sudo make install
 ```
 
-### 3.3 配置环境变量
+#### 3.2.3 配置环境变量
 
 1. 使用编辑器编辑 shell 的 profile；
 

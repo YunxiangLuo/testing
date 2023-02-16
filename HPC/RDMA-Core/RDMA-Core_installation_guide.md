@@ -30,9 +30,19 @@ bash start_vm.sh
 
 3. 登录用户，默认的用户名为 `openeuler` ，密码为 `openEuler12#$`。
 
-## 3. 编译与安装 OpenMPI
+## 3. 安装 RDMA-Core
 
-### 3.1 获取源代码
+### 3.1 直接从 `dnf` 安装现有版本
+
+执行以下指令；
+
+```
+$ sudo dnf install rdma-core
+```
+
+提示 `Complete!` 即安装完成。
+
+#### 3.2.1 获取源代码
 
 1. 在 [RDMA-Core GitHub 仓库](https://github.com/linux-rdma/rdma-core/releases/)下载最新稳定版源代码压缩文件 `rdma-core-44.0.tar.gz`；
 
@@ -42,7 +52,7 @@ bash start_vm.sh
 $ tar -xzf ./rdma-core-44.0.tar.gz
 ```
 
-### 3.2 编译与安装
+#### 3.2.2 编译与安装
 
 1. 进入解压输出文件所在文件夹；
 

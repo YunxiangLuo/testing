@@ -30,9 +30,38 @@ bash start_vm.sh
 
 3. 登录用户，默认的用户名为 `openeuler` ，密码为 `openEuler12#$`。
 
-## 3. 编译与安装 OpenMPI
+## 3. 编译与安装 MPICH
 
-### 3.1 获取源代码
+### 3.1 直接从 `dnf` 安装现有版本
+
+1. 执行以下指令；
+
+```
+$ sudo dnf install mpich
+```
+
+提示 `Complete!` 即安装完成；
+
+2. 使用编辑器编辑 shell 的 profile；
+
+3. 添加环境变量；
+
+```
+export PATH="/usr/lib64/mpich/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/lib64/mpich/lib:$LD_LIBRARY_PATH"
+```
+
+4. 重载 profile；
+
+5. 执行以下命令，检查环境变量是否正常；
+
+```
+$ which mpirun
+```
+
+若回显 `/usr/lib64/mpich/bin/mpirun`，则环境变量配置正常，安装完成。
+
+#### 3.2.1 获取源代码
 
 1. 在 [MPI 网站](https://www.mpich.org/downloads/)下载最新稳定版源代码压缩文件 `mpich-4.1.tar.gz`；
 
@@ -42,7 +71,7 @@ bash start_vm.sh
 $ tar -xzf ./mpich-4.1.tar.gz
 ```
 
-### 3.2 编译与安装
+#### 3.2.2 编译与安装
 
 1. 进入解压输出文件所在文件夹；
 
@@ -64,7 +93,7 @@ $ make -j$(nproc)
 $ sudo make install
 ```
 
-### 3.3 配置环境变量
+#### 3.2.3 配置环境变量
 
 1. 使用编辑器编辑 shell 的 profile；
 
@@ -80,7 +109,7 @@ export LD_LIBRARY_PATH="/opt/lib:$LD_LIBRARY_PATH"
 4. 执行以下命令，检查环境变量是否正常；
 
 ```
-$ which mpicc
+$ which mpirun
 ```
 
-若回显 `/opt/bin/mpicc`，则环境变量配置正常，安装完成。
+若回显 `/opt/bin/mpirun`，则环境变量配置正常，安装完成。
