@@ -4,10 +4,10 @@
 
 ### 1.1 准备示例程序
 
-1. 进入源代码的示例程序文件夹
+1. 获取 OpenMPI 源代码后，进入源代码的示例程序文件夹
 
     ```
-    cd openmpi-4.1.4/examples
+    cd openmpi-x.x.x/examples
     ```
 
 2. 使用 make 编译测试用代码
