@@ -1,5 +1,7 @@
 # MPICH 使用说明
 
+[官方文档](https://www.mpich.org/documentation/guides/)
+
 ## 1. 构建 MPICH 官方示例程序并测试
 
 ### 1.1 准备示例程序 cpi

@@ -1,5 +1,7 @@
 # OpenMPI 使用说明
 
+[官方文档](https://docs.open-mpi.org)
+
 ## 1. 构建 OpenMPI 官方示例程序并测试
 
 ### 1.1 准备示例程序

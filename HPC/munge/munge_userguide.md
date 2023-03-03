@@ -1,5 +1,7 @@
 # munge 使用说明
 
+[官方文档](https://github.com/dun/munge/wiki)
+
 ## 1. 创建授权密钥
 
 1. 执行以下命令，创建授权密钥；
